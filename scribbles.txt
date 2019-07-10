@@ -1,0 +1,1011 @@
+/Users/ashok/.node-gyp/12.4.0/include/node/v8.h:2567:3: note: 'Uint32Value' declared here
+  V8_WARN_UNUSED_RESULT Maybe<uint32_t> Uint32Value(
+  ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8config.h:347:31: note: expanded from macro 'V8_WARN_UNUSED_RESULT'
+#define V8_WARN_UNUSED_RESULT __attribute__((warn_unused_result))
+                              ^
+In file included from ../src/node-boilerplate/scrypt_params_async.cc:4:
+In file included from ../src/node-boilerplate/inc/scrypt_params_async.h:28:
+In file included from ../src/node-boilerplate/inc/scrypt_async.h:28:
+../src/node-boilerplate/inc/scrypt_common.h:41:14: warning: 'Get' is deprecated: Use maybe version [-Wdeprecated-declarations]
+      p(obj->Get(Nan::New("p").ToLocalChecked())->Uint32Value()) {}
+             ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8.h:3412:3: note: 'Get' has been explicitly marked deprecated here
+  V8_DEPRECATE_SOON("Use maybe version", Local<Value> Get(Local<Value> key));
+  ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8config.h:322:29: note: expanded from macro 'V8_DEPRECATE_SOON'
+  declarator __attribute__((deprecated(message)))
+                            ^
+In file included from ../src/node-boilerplate/scrypt_params_async.cc:4:
+In file included from ../src/node-boilerplate/inc/scrypt_params_async.h:28:
+In file included from ../src/node-boilerplate/inc/scrypt_async.h:28:
+../src/node-boilerplate/inc/scrypt_common.h:41:63: error: too few arguments to function call, single argument 'context' was
+      not specified
+      p(obj->Get(Nan::New("p").ToLocalChecked())->Uint32Value()) {}
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8.h:2567:3: note: 'Uint32Value' declared here
+  V8_WARN_UNUSED_RESULT Maybe<uint32_t> Uint32Value(
+  ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8config.h:347:31: note: expanded from macro 'V8_WARN_UNUSED_RESULT'
+#define V8_WARN_UNUSED_RESULT __attribute__((warn_unused_result))
+                              ^
+In file included from ../src/node-boilerplate/scrypt_params_async.cc:4:
+In file included from ../src/node-boilerplate/inc/scrypt_params_async.h:28:
+../src/node-boilerplate/inc/scrypt_async.h:53:17: warning: 'Call' is deprecated [-Wdeprecated-declarations]
+      callback->Call(1, argv);
+                ^
+../../nan/nan.h:1739:3: note: 'Call' has been explicitly marked deprecated here
+  NAN_DEPRECATED inline v8::Local<v8::Value>
+  ^
+../../nan/nan.h:104:40: note: expanded from macro 'NAN_DEPRECATED'
+# define NAN_DEPRECATED __attribute__((deprecated))
+                                       ^
+In file included from ../src/node-boilerplate/scrypt_params_async.cc:4:
+../src/node-boilerplate/inc/scrypt_params_async.h:35:36: error: too few arguments to function call, single argument 'context'
+      was not specified
+      maxtime(info[0]->NumberValue()),
+              ~~~~~~~~~~~~~~~~~~~~ ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8.h:2564:3: note: 'NumberValue' declared here
+  V8_WARN_UNUSED_RESULT Maybe<double> NumberValue(Local<Context> context) const;
+  ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8config.h:347:31: note: expanded from macro 'V8_WARN_UNUSED_RESULT'
+#define V8_WARN_UNUSED_RESULT __attribute__((warn_unused_result))
+                              ^
+In file included from ../src/node-boilerplate/scrypt_params_async.cc:4:
+../src/node-boilerplate/inc/scrypt_params_async.h:36:39: error: too few arguments to function call, single argument 'context'
+      was not specified
+      maxmemfrac(info[1]->NumberValue()),
+                 ~~~~~~~~~~~~~~~~~~~~ ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8.h:2564:3: note: 'NumberValue' declared here
+  V8_WARN_UNUSED_RESULT Maybe<double> NumberValue(Local<Context> context) const;
+  ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8config.h:347:31: note: expanded from macro 'V8_WARN_UNUSED_RESULT'
+#define V8_WARN_UNUSED_RESULT __attribute__((warn_unused_result))
+                              ^
+In file included from ../src/node-boilerplate/scrypt_params_async.cc:4:
+../src/node-boilerplate/inc/scrypt_params_async.h:37:36: error: too few arguments to function call, single argument 'context'
+      was not specified
+      maxmem(info[2]->IntegerValue()),
+             ~~~~~~~~~~~~~~~~~~~~~ ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8.h:2565:3: note: 'IntegerValue' declared here
+  V8_WARN_UNUSED_RESULT Maybe<int64_t> IntegerValue(
+  ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8config.h:347:31: note: expanded from macro 'V8_WARN_UNUSED_RESULT'
+#define V8_WARN_UNUSED_RESULT __attribute__((warn_unused_result))
+                              ^
+In file included from ../src/node-boilerplate/scrypt_params_async.cc:4:
+../src/node-boilerplate/inc/scrypt_params_async.h:38:39: error: too few arguments to function call, single argument 'context'
+      was not specified
+      osfreemem(info[3]->IntegerValue())
+                ~~~~~~~~~~~~~~~~~~~~~ ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8.h:2565:3: note: 'IntegerValue' declared here
+  V8_WARN_UNUSED_RESULT Maybe<int64_t> IntegerValue(
+  ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8config.h:347:31: note: expanded from macro 'V8_WARN_UNUSED_RESULT'
+#define V8_WARN_UNUSED_RESULT __attribute__((warn_unused_result))
+                              ^
+../src/node-boilerplate/scrypt_params_async.cc:23:8: warning: 'Set' is deprecated: Use maybe version
+      [-Wdeprecated-declarations]
+  obj->Set(Nan::New("N").ToLocalChecked(), Nan::New<Integer>(logN));
+       ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8.h:3358:3: note: 'Set' has been explicitly marked deprecated here
+  V8_DEPRECATE_SOON("Use maybe version",
+  ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8config.h:322:29: note: expanded from macro 'V8_DEPRECATE_SOON'
+  declarator __attribute__((deprecated(message)))
+                            ^
+../src/node-boilerplate/scrypt_params_async.cc:24:8: warning: 'Set' is deprecated: Use maybe version
+      [-Wdeprecated-declarations]
+  obj->Set(Nan::New("r").ToLocalChecked(), Nan::New<Integer>(r));
+       ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8.h:3358:3: note: 'Set' has been explicitly marked deprecated here
+  V8_DEPRECATE_SOON("Use maybe version",
+  ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8config.h:322:29: note: expanded from macro 'V8_DEPRECATE_SOON'
+  declarator __attribute__((deprecated(message)))
+                            ^
+../src/node-boilerplate/scrypt_params_async.cc:25:8: warning: 'Set' is deprecated: Use maybe version
+      [-Wdeprecated-declarations]
+  obj->Set(Nan::New("p").ToLocalChecked(), Nan::New<Integer>(p));
+       ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8.h:3358:3: note: 'Set' has been explicitly marked deprecated here
+  V8_DEPRECATE_SOON("Use maybe version",
+  ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8config.h:322:29: note: expanded from macro 'V8_DEPRECATE_SOON'
+  declarator __attribute__((deprecated(message)))
+                            ^
+../src/node-boilerplate/scrypt_params_async.cc:32:13: warning: 'Call' is deprecated [-Wdeprecated-declarations]
+  callback->Call(2, argv);
+            ^
+../../nan/nan.h:1739:3: note: 'Call' has been explicitly marked deprecated here
+  NAN_DEPRECATED inline v8::Local<v8::Value>
+  ^
+../../nan/nan.h:104:40: note: expanded from macro 'NAN_DEPRECATED'
+# define NAN_DEPRECATED __attribute__((deprecated))
+                                       ^
+8 warnings and 7 errors generated.
+make: *** [Release/obj.target/scrypt/src/node-boilerplate/scrypt_params_async.o] Error 1
+gyp ERR! build error 
+gyp ERR! stack Error: `make` failed with exit code: 2
+gyp ERR! stack     at ChildProcess.onExit (/usr/local/lib/node_modules/npm/node_modules/node-gyp/lib/build.js:262:23)
+gyp ERR! stack     at ChildProcess.emit (events.js:200:13)
+gyp ERR! stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:272:12)
+gyp ERR! System Darwin 17.7.0
+gyp ERR! command "/usr/local/bin/node" "/usr/local/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js" "rebuild"
+gyp ERR! cwd /Volumes/Drive/Workshops/Blockchain/dapps/ico_irl/node_modules/scrypt
+gyp ERR! node -v v12.4.0
+gyp ERR! node-gyp -v v3.8.0
+gyp ERR! not ok 
+npm WARN ajv-keywords@2.1.1 requires a peer of ajv@^5.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN ico-irl@1.0.0 No repository field.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: scrypt@6.0.3 (node_modules/scrypt):
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: scrypt@6.0.3 install: `node-gyp rebuild`
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: Exit status 1
+
++ openzeppelin-solidity@2.3.0
+updated 1 package and audited 18624 packages in 23.048s
+found 3 low severity vulnerabilities
+  run `npm audit fix` to fix them, or `npm audit` for details
+news-MacBook-Pro:ico_irl ashok$ npm audit fix
+
+> scrypt@6.0.3 preinstall /Volumes/Drive/Workshops/Blockchain/dapps/ico_irl/node_modules/scrypt
+> node node-scrypt-preinstall.js
+
+
+> scrypt@6.0.3 install /Volumes/Drive/Workshops/Blockchain/dapps/ico_irl/node_modules/scrypt
+> node-gyp rebuild
+
+  SOLINK_MODULE(target) Release/copied_files.node
+  CC(target) Release/obj.target/scrypt_wrapper/src/util/memlimit.o
+  CC(target) Release/obj.target/scrypt_wrapper/src/scryptwrapper/keyderivation.o
+  CC(target) Release/obj.target/scrypt_wrapper/src/scryptwrapper/pickparams.o
+  CC(target) Release/obj.target/scrypt_wrapper/src/scryptwrapper/hash.o
+  LIBTOOL-STATIC Release/scrypt_wrapper.a
+  CC(target) Release/obj.target/scrypt_lib/scrypt/scrypt-1.2.0/lib/crypto/crypto_scrypt.o
+  CC(target) Release/obj.target/scrypt_lib/scrypt/scrypt-1.2.0/lib/crypto/crypto_scrypt_smix.o
+  CC(target) Release/obj.target/scrypt_lib/scrypt/scrypt-1.2.0/libcperciva/util/warnp.o
+  CC(target) Release/obj.target/scrypt_lib/scrypt/scrypt-1.2.0/libcperciva/alg/sha256.o
+  CC(target) Release/obj.target/scrypt_lib/scrypt/scrypt-1.2.0/libcperciva/util/insecure_memzero.o
+  CC(target) Release/obj.target/scrypt_lib/scrypt/scrypt-1.2.0/lib/scryptenc/scryptenc_cpuperf.o
+  LIBTOOL-STATIC Release/scrypt_lib.a
+  CXX(target) Release/obj.target/scrypt/src/node-boilerplate/scrypt_common.o
+  CXX(target) Release/obj.target/scrypt/src/node-boilerplate/scrypt_params_async.o
+In file included from ../src/node-boilerplate/scrypt_params_async.cc:4:
+In file included from ../src/node-boilerplate/inc/scrypt_params_async.h:28:
+In file included from ../src/node-boilerplate/inc/scrypt_async.h:28:
+../src/node-boilerplate/inc/scrypt_common.h:39:14: warning: 'Get' is deprecated: Use maybe version [-Wdeprecated-declarations]
+      N(obj->Get(Nan::New("N").ToLocalChecked())->Uint32Value()),
+             ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8.h:3412:3: note: 'Get' has been explicitly marked deprecated here
+  V8_DEPRECATE_SOON("Use maybe version", Local<Value> Get(Local<Value> key));
+  ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8config.h:322:29: note: expanded from macro 'V8_DEPRECATE_SOON'
+  declarator __attribute__((deprecated(message)))
+                            ^
+In file included from ../src/node-boilerplate/scrypt_params_async.cc:4:
+In file included from ../src/node-boilerplate/inc/scrypt_params_async.h:28:
+In file included from ../src/node-boilerplate/inc/scrypt_async.h:28:
+../src/node-boilerplate/inc/scrypt_common.h:39:63: error: too few arguments to function call, single argument 'context' was
+      not specified
+      N(obj->Get(Nan::New("N").ToLocalChecked())->Uint32Value()),
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8.h:2567:3: note: 'Uint32Value' declared here
+  V8_WARN_UNUSED_RESULT Maybe<uint32_t> Uint32Value(
+  ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8config.h:347:31: note: expanded from macro 'V8_WARN_UNUSED_RESULT'
+#define V8_WARN_UNUSED_RESULT __attribute__((warn_unused_result))
+                              ^
+In file included from ../src/node-boilerplate/scrypt_params_async.cc:4:
+In file included from ../src/node-boilerplate/inc/scrypt_params_async.h:28:
+In file included from ../src/node-boilerplate/inc/scrypt_async.h:28:
+../src/node-boilerplate/inc/scrypt_common.h:40:14: warning: 'Get' is deprecated: Use maybe version [-Wdeprecated-declarations]
+      r(obj->Get(Nan::New("r").ToLocalChecked())->Uint32Value()),
+             ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8.h:3412:3: note: 'Get' has been explicitly marked deprecated here
+  V8_DEPRECATE_SOON("Use maybe version", Local<Value> Get(Local<Value> key));
+  ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8config.h:322:29: note: expanded from macro 'V8_DEPRECATE_SOON'
+  declarator __attribute__((deprecated(message)))
+                            ^
+In file included from ../src/node-boilerplate/scrypt_params_async.cc:4:
+In file included from ../src/node-boilerplate/inc/scrypt_params_async.h:28:
+In file included from ../src/node-boilerplate/inc/scrypt_async.h:28:
+../src/node-boilerplate/inc/scrypt_common.h:40:63: error: too few arguments to function call, single argument 'context' was
+      not specified
+      r(obj->Get(Nan::New("r").ToLocalChecked())->Uint32Value()),
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8.h:2567:3: note: 'Uint32Value' declared here
+  V8_WARN_UNUSED_RESULT Maybe<uint32_t> Uint32Value(
+  ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8config.h:347:31: note: expanded from macro 'V8_WARN_UNUSED_RESULT'
+#define V8_WARN_UNUSED_RESULT __attribute__((warn_unused_result))
+                              ^
+In file included from ../src/node-boilerplate/scrypt_params_async.cc:4:
+In file included from ../src/node-boilerplate/inc/scrypt_params_async.h:28:
+In file included from ../src/node-boilerplate/inc/scrypt_async.h:28:
+../src/node-boilerplate/inc/scrypt_common.h:41:14: warning: 'Get' is deprecated: Use maybe version [-Wdeprecated-declarations]
+      p(obj->Get(Nan::New("p").ToLocalChecked())->Uint32Value()) {}
+             ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8.h:3412:3: note: 'Get' has been explicitly marked deprecated here
+  V8_DEPRECATE_SOON("Use maybe version", Local<Value> Get(Local<Value> key));
+  ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8config.h:322:29: note: expanded from macro 'V8_DEPRECATE_SOON'
+  declarator __attribute__((deprecated(message)))
+                            ^
+In file included from ../src/node-boilerplate/scrypt_params_async.cc:4:
+In file included from ../src/node-boilerplate/inc/scrypt_params_async.h:28:
+In file included from ../src/node-boilerplate/inc/scrypt_async.h:28:
+../src/node-boilerplate/inc/scrypt_common.h:41:63: error: too few arguments to function call, single argument 'context' was
+      not specified
+      p(obj->Get(Nan::New("p").ToLocalChecked())->Uint32Value()) {}
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8.h:2567:3: note: 'Uint32Value' declared here
+  V8_WARN_UNUSED_RESULT Maybe<uint32_t> Uint32Value(
+  ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8config.h:347:31: note: expanded from macro 'V8_WARN_UNUSED_RESULT'
+#define V8_WARN_UNUSED_RESULT __attribute__((warn_unused_result))
+                              ^
+In file included from ../src/node-boilerplate/scrypt_params_async.cc:4:
+In file included from ../src/node-boilerplate/inc/scrypt_params_async.h:28:
+../src/node-boilerplate/inc/scrypt_async.h:53:17: warning: 'Call' is deprecated [-Wdeprecated-declarations]
+      callback->Call(1, argv);
+                ^
+../../nan/nan.h:1739:3: note: 'Call' has been explicitly marked deprecated here
+  NAN_DEPRECATED inline v8::Local<v8::Value>
+  ^
+../../nan/nan.h:104:40: note: expanded from macro 'NAN_DEPRECATED'
+# define NAN_DEPRECATED __attribute__((deprecated))
+                                       ^
+In file included from ../src/node-boilerplate/scrypt_params_async.cc:4:
+../src/node-boilerplate/inc/scrypt_params_async.h:35:36: error: too few arguments to function call, single argument 'context'
+      was not specified
+      maxtime(info[0]->NumberValue()),
+              ~~~~~~~~~~~~~~~~~~~~ ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8.h:2564:3: note: 'NumberValue' declared here
+  V8_WARN_UNUSED_RESULT Maybe<double> NumberValue(Local<Context> context) const;
+  ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8config.h:347:31: note: expanded from macro 'V8_WARN_UNUSED_RESULT'
+#define V8_WARN_UNUSED_RESULT __attribute__((warn_unused_result))
+                              ^
+In file included from ../src/node-boilerplate/scrypt_params_async.cc:4:
+../src/node-boilerplate/inc/scrypt_params_async.h:36:39: error: too few arguments to function call, single argument 'context'
+      was not specified
+      maxmemfrac(info[1]->NumberValue()),
+                 ~~~~~~~~~~~~~~~~~~~~ ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8.h:2564:3: note: 'NumberValue' declared here
+  V8_WARN_UNUSED_RESULT Maybe<double> NumberValue(Local<Context> context) const;
+  ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8config.h:347:31: note: expanded from macro 'V8_WARN_UNUSED_RESULT'
+#define V8_WARN_UNUSED_RESULT __attribute__((warn_unused_result))
+                              ^
+In file included from ../src/node-boilerplate/scrypt_params_async.cc:4:
+../src/node-boilerplate/inc/scrypt_params_async.h:37:36: error: too few arguments to function call, single argument 'context'
+      was not specified
+      maxmem(info[2]->IntegerValue()),
+             ~~~~~~~~~~~~~~~~~~~~~ ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8.h:2565:3: note: 'IntegerValue' declared here
+  V8_WARN_UNUSED_RESULT Maybe<int64_t> IntegerValue(
+  ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8config.h:347:31: note: expanded from macro 'V8_WARN_UNUSED_RESULT'
+#define V8_WARN_UNUSED_RESULT __attribute__((warn_unused_result))
+                              ^
+In file included from ../src/node-boilerplate/scrypt_params_async.cc:4:
+../src/node-boilerplate/inc/scrypt_params_async.h:38:39: error: too few arguments to function call, single argument 'context'
+      was not specified
+      osfreemem(info[3]->IntegerValue())
+                ~~~~~~~~~~~~~~~~~~~~~ ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8.h:2565:3: note: 'IntegerValue' declared here
+  V8_WARN_UNUSED_RESULT Maybe<int64_t> IntegerValue(
+  ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8config.h:347:31: note: expanded from macro 'V8_WARN_UNUSED_RESULT'
+#define V8_WARN_UNUSED_RESULT __attribute__((warn_unused_result))
+                              ^
+../src/node-boilerplate/scrypt_params_async.cc:23:8: warning: 'Set' is deprecated: Use maybe version
+      [-Wdeprecated-declarations]
+  obj->Set(Nan::New("N").ToLocalChecked(), Nan::New<Integer>(logN));
+       ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8.h:3358:3: note: 'Set' has been explicitly marked deprecated here
+  V8_DEPRECATE_SOON("Use maybe version",
+  ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8config.h:322:29: note: expanded from macro 'V8_DEPRECATE_SOON'
+  declarator __attribute__((deprecated(message)))
+                            ^
+../src/node-boilerplate/scrypt_params_async.cc:24:8: warning: 'Set' is deprecated: Use maybe version
+      [-Wdeprecated-declarations]
+  obj->Set(Nan::New("r").ToLocalChecked(), Nan::New<Integer>(r));
+       ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8.h:3358:3: note: 'Set' has been explicitly marked deprecated here
+  V8_DEPRECATE_SOON("Use maybe version",
+  ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8config.h:322:29: note: expanded from macro 'V8_DEPRECATE_SOON'
+  declarator __attribute__((deprecated(message)))
+                            ^
+../src/node-boilerplate/scrypt_params_async.cc:25:8: warning: 'Set' is deprecated: Use maybe version
+      [-Wdeprecated-declarations]
+  obj->Set(Nan::New("p").ToLocalChecked(), Nan::New<Integer>(p));
+       ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8.h:3358:3: note: 'Set' has been explicitly marked deprecated here
+  V8_DEPRECATE_SOON("Use maybe version",
+  ^
+/Users/ashok/.node-gyp/12.4.0/include/node/v8config.h:322:29: note: expanded from macro 'V8_DEPRECATE_SOON'
+  declarator __attribute__((deprecated(message)))
+                            ^
+../src/node-boilerplate/scrypt_params_async.cc:32:13: warning: 'Call' is deprecated [-Wdeprecated-declarations]
+  callback->Call(2, argv);
+            ^
+../../nan/nan.h:1739:3: note: 'Call' has been explicitly marked deprecated here
+  NAN_DEPRECATED inline v8::Local<v8::Value>
+  ^
+../../nan/nan.h:104:40: note: expanded from macro 'NAN_DEPRECATED'
+# define NAN_DEPRECATED __attribute__((deprecated))
+                                       ^
+8 warnings and 7 errors generated.
+make: *** [Release/obj.target/scrypt/src/node-boilerplate/scrypt_params_async.o] Error 1
+gyp ERR! build error 
+gyp ERR! stack Error: `make` failed with exit code: 2
+gyp ERR! stack     at ChildProcess.onExit (/usr/local/lib/node_modules/npm/node_modules/node-gyp/lib/build.js:262:23)
+gyp ERR! stack     at ChildProcess.emit (events.js:200:13)
+gyp ERR! stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:272:12)
+gyp ERR! System Darwin 17.7.0
+gyp ERR! command "/usr/local/bin/node" "/usr/local/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js" "rebuild"
+gyp ERR! cwd /Volumes/Drive/Workshops/Blockchain/dapps/ico_irl/node_modules/scrypt
+gyp ERR! node -v v12.4.0
+gyp ERR! node-gyp -v v3.8.0
+gyp ERR! not ok 
+npm WARN ajv-keywords@2.1.1 requires a peer of ajv@^5.0.0 but none is installed. You must install peer dependencies yourself.
+npm WARN ico-irl@1.0.0 No repository field.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: scrypt@6.0.3 (node_modules/scrypt):
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: scrypt@6.0.3 install: `node-gyp rebuild`
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: Exit status 1
+
+up to date in 25.381s
+fixed 0 of 3 vulnerabilities in 18624 scanned packages
+  2 vulnerabilities required manual review and could not be updated
+  1 package update for 1 vuln involved breaking changes
+  (use `npm audit fix --force` to install breaking changes; or refer to `npm audit` for steps to fix these manually)
+news-MacBook-Pro:ico_irl ashok$ npm audit fix --force
+npm WARN using --force I sure hope you know what you are doing.
+
+> websocket@1.0.29 install /Volumes/Drive/Workshops/Blockchain/dapps/ico_irl/node_modules/websocket
+> (node-gyp rebuild 2> builderror.log) || (exit 0)
+news-MacBook-Pro:ico_irl ashok$ truffle compile
+
+Compiling your contracts...
+===========================
+> Compiling ./contracts/ZenexToken.sol
+> Compiling ./contracts/ZenexTokenCrowedsale.sol
+
+/Volumes/Drive/Workshops/Blockchain/dapps/ico_irl/contracts/ZenexToken.sol:9:9: DeclarationError: Undeclared identifier.
+        DetailedERC20(_name, _symbol, _decimals)
+        ^-----------^
+
+Compilation failed. See above.
+Truffle v5.0.22 (core: 5.0.22)
+Node v12.4.0
+news-MacBook-Pro:ico_irl ashok$ truffle compile
+
+Compiling your contracts...
+===========================
+> Compiling ./contracts/ZenexToken.sol
+> Compiling ./contracts/ZenexTokenCrowedsale.sol
+
+/Volumes/Drive/Workshops/Blockchain/dapps/ico_irl/contracts/ZenexTokenCrowedsale.sol:10:5: DeclarationError: Identifier not found or not unique.
+    ERC20 _token
+    ^---^
+
+Compilation failed. See above.
+Truffle v5.0.22 (core: 5.0.22)
+Node v12.4.0
+news-MacBook-Pro:ico_irl ashok$ truffle compile
+^[[A
+Compiling your contracts...
+===========================
+> Compiling ./contracts/ZenexToken.sol
+> Compiling ./contracts/ZenexTokenCrowedsale.sol
+
+/Volumes/Drive/Workshops/Blockchain/dapps/ico_irl/contracts/ZenexTokenCrowedsale.sol:12:22: TypeError: Invalid type for argument in modifier invocation. Invalid implicit conversion from address to address payable requested.
+    Crowdsale(_rate, _wallet, _token)
+                     ^-----^
+
+Compilation failed. See above.
+Truffle v5.0.22 (core: 5.0.22)
+Node v12.4.0
+news-MacBook-Pro:ico_irl ashok$ truffle compile
+
+Compiling your contracts...
+===========================
+> Compiling ./contracts/ZenexToken.sol
+> Compiling ./contracts/ZenexTokenCrowedsale.sol
+
+    > compilation warnings encountered:
+
+openzeppelin-solidity/contracts/crowdsale/Crowdsale.sol:138:5: Warning: Function state mutability can be restricted to pure
+    function _preValidatePurchase(address beneficiary, uint256 weiAmount) internal view {
+    ^ (Relevant source part starts here and spans across multiple lines).
+
+> Artifacts written to /Volumes/Drive/Workshops/Blockchain/dapps/ico_irl/build/contracts
+> Compiled successfully using:
+   - solc: 0.5.8+commit.23d335f2.Emscripten.clang
+
+news-MacBook-Pro:ico_irl ashok$ truffle compile
+news-MacBook-Pro:ico_irl ashok$ truffle compile
+
+Compiling your contracts...
+===========================
+> Compiling ./contracts/ZenexTokenCrowdsale.sol
+
+    > compilation warnings encountered:
+
+openzeppelin-solidity/contracts/crowdsale/Crowdsale.sol:138:5: Warning: Function state mutability can be restricted to pure
+    function _preValidatePurchase(address beneficiary, uint256 weiAmount) internal view{
+    ^ (Relevant source part starts here and spans across multiple lines).
+
+> Artifacts written to /Volumes/Drive/Workshops/Blockchain/dapps/ico_irl/build/contracts
+> Compiled successfully using:
+   - solc: 0.5.8+commit.23d335f2.Emscripten.clang
+
+news-MacBook-Pro:ico_irl ashok$ truffle test
+^C
+news-MacBook-Pro:ico_irl ashok$ truffle test ./test/ZenexTokenCrowdsale.test.js 
+Using network 'development'.
+
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+
+  0 passing (1ms)
+
+news-MacBook-Pro:ico_irl ashok$ truffle test ./test/ZenexTokenCrowdsale.test.js 
+Using network 'development'.
+
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+
+  Contract: ZenexTokenCrowdsale
+    crowdsale
+      1) tracks the rate
+
+    Events emitted during test:
+    ---------------------------
+
+    MinterAdded(account: <indexed> 0xdfF5BBcfcBdDb1559Db4C9D10e2C4cefe8E0A778 (address))
+    PauserAdded(account: <indexed> 0xdfF5BBcfcBdDb1559Db4C9D10e2C4cefe8E0A778 (address))
+
+    ---------------------------
+      2) tracks the wallet
+
+    Events emitted during test:
+    ---------------------------
+
+    MinterAdded(account: <indexed> 0xdfF5BBcfcBdDb1559Db4C9D10e2C4cefe8E0A778 (address))
+    PauserAdded(account: <indexed> 0xdfF5BBcfcBdDb1559Db4C9D10e2C4cefe8E0A778 (address))
+
+    ---------------------------
+      3) tracks the token
+
+    Events emitted during test:
+    ---------------------------
+
+    MinterAdded(account: <indexed> 0xdfF5BBcfcBdDb1559Db4C9D10e2C4cefe8E0A778 (address))
+    PauserAdded(account: <indexed> 0xdfF5BBcfcBdDb1559Db4C9D10e2C4cefe8E0A778 (address))
+
+    ---------------------------
+
+
+  0 passing (3s)
+  3 failing
+
+  1) Contract: ZenexTokenCrowdsale
+       crowdsale
+         tracks the rate:
+     TypeError: Cannot read property 'rate' of undefined
+      at Context.<anonymous> (test/ZenexTokenCrowdsale.test.js:39:45)
+      at processImmediate (internal/timers.js:439:21)
+
+  2) Contract: ZenexTokenCrowdsale
+       crowdsale
+         tracks the wallet:
+     TypeError: Cannot read property 'wallet' of undefined
+      at Context.<anonymous> (test/ZenexTokenCrowdsale.test.js:44:47)
+      at processImmediate (internal/timers.js:439:21)
+
+  3) Contract: ZenexTokenCrowdsale
+       crowdsale
+         tracks the token:
+     TypeError: Cannot read property 'token' of undefined
+      at Context.<anonymous> (test/ZenexTokenCrowdsale.test.js:49:46)
+      at processImmediate (internal/timers.js:439:21)
+
+
+
+news-MacBook-Pro:ico_irl ashok$ truffle test ./test/ZenexTokenCrowdsale.test.js 
+Using network 'development'.
+
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+
+  Contract: ZenexTokenCrowdsale
+    crowdsale
+      1) tracks the rate
+
+    Events emitted during test:
+    ---------------------------
+
+    MinterAdded(account: <indexed> 0xdfF5BBcfcBdDb1559Db4C9D10e2C4cefe8E0A778 (address))
+    PauserAdded(account: <indexed> 0xdfF5BBcfcBdDb1559Db4C9D10e2C4cefe8E0A778 (address))
+
+    ---------------------------
+      ✓ tracks the wallet (106ms)
+      ✓ tracks the token
+
+
+  2 passing (1s)
+  1 failing
+
+  1) Contract: ZenexTokenCrowdsale
+       crowdsale
+         tracks the rate:
+     AssertionError: expected <BN: 1f4> to be an instance of string, number or BigNumber
+  
+
+
+
+news-MacBook-Pro:ico_irl ashok$ truffle test ./test/ZenexTokenCrowdsale.test.js 
+Using network 'development'.
+
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+
+  Contract: ZenexTokenCrowdsale
+    crowdsale
+      1) "before each" hook for "tracks the rate"
+
+
+  0 passing (2s)
+  1 failing
+
+  1) Contract: ZenexTokenCrowdsale
+       "before each" hook for "tracks the rate":
+     TypeError: this.decimals is not a function
+      at Context.<anonymous> (test/ZenexTokenCrowdsale.test.js:23:18)
+      at /usr/local/lib/node_modules/truffle/build/webpack:/packages/truffle-core/lib/testing/testrunner.js:153:1
+      at processTicksAndRejections (internal/process/task_queues.js:89:5)
+
+
+
+news-MacBook-Pro:ico_irl ashok$ truffle test ./test/ZenexTokenCrowdsale.test.js 
+Using network 'development'.
+
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+
+  Contract: ZenexTokenCrowdsale
+    crowdsale
+      1) "before each" hook for "tracks the rate"
+
+
+  0 passing (2s)
+  1 failing
+
+  1) Contract: ZenexTokenCrowdsale
+       "before each" hook for "tracks the rate":
+     TypeError: this.decimals.toNumber is not a function
+      at Context.<anonymous> (test/ZenexTokenCrowdsale.test.js:18:39)
+      at /usr/local/lib/node_modules/truffle/build/webpack:/packages/truffle-core/lib/testing/testrunner.js:153:1
+      at processTicksAndRejections (internal/process/task_queues.js:89:5)
+
+
+
+news-MacBook-Pro:ico_irl ashok$ truffle test ./test/ZenexTokenCrowdsale.test.js 
+Using network 'development'.
+
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+
+  Contract: ZenexTokenCrowdsale
+    crowdsale
+      1) "before each" hook for "tracks the rate"
+
+
+  0 passing (2s)
+  1 failing
+
+  1) Contract: ZenexTokenCrowdsale
+       "before each" hook for "tracks the rate":
+     TypeError: this.decimals.toNumber is not a function
+      at Context.<anonymous> (test/ZenexTokenCrowdsale.test.js:23:27)
+      at /usr/local/lib/node_modules/truffle/build/webpack:/packages/truffle-core/lib/testing/testrunner.js:153:1
+      at processTicksAndRejections (internal/process/task_queues.js:89:5)
+
+
+
+news-MacBook-Pro:ico_irl ashok$ truffle test ./test/ZenexTokenCrowdsale.test.js 
+Using network 'development'.
+
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+
+  Contract: ZenexTokenCrowdsale
+    crowdsale
+      1) tracks the rate
+
+    Events emitted during test:
+    ---------------------------
+
+    MinterAdded(account: <indexed> 0xdfF5BBcfcBdDb1559Db4C9D10e2C4cefe8E0A778 (address))
+    PauserAdded(account: <indexed> 0xdfF5BBcfcBdDb1559Db4C9D10e2C4cefe8E0A778 (address))
+
+    ---------------------------
+      ✓ tracks the wallet (38ms)
+      ✓ tracks the token
+
+
+  2 passing (1s)
+  1 failing
+
+  1) Contract: ZenexTokenCrowdsale
+       crowdsale
+         tracks the rate:
+     AssertionError: expected <BN: 1f4> to be an instance of string, number or BigNumber
+  
+
+
+
+news-MacBook-Pro:ico_irl ashok$ truffle test ./test/ZenexTokenCrowdsale.test.js 
+Using network 'development'.
+
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+
+  Contract: ZenexTokenCrowdsale
+    crowdsale
+      1) tracks the rate
+
+    Events emitted during test:
+    ---------------------------
+
+    MinterAdded(account: <indexed> 0xdfF5BBcfcBdDb1559Db4C9D10e2C4cefe8E0A778 (address))
+    PauserAdded(account: <indexed> 0xdfF5BBcfcBdDb1559Db4C9D10e2C4cefe8E0A778 (address))
+
+    ---------------------------
+      ✓ tracks the wallet (50ms)
+      ✓ tracks the token (53ms)
+
+
+  2 passing (1s)
+  1 failing
+
+  1) Contract: ZenexTokenCrowdsale
+       crowdsale
+         tracks the rate:
+     TypeError: this.crowdsale.rate(...).toNumber is not a function
+      at Context.<anonymous> (test/ZenexTokenCrowdsale.test.js:39:52)
+      at processImmediate (internal/timers.js:439:21)
+
+
+
+news-MacBook-Pro:ico_irl ashok$ truffle test ./test/ZenexTokenCrowdsale.test.js 
+Using network 'development'.
+
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+
+  Contract: ZenexTokenCrowdsale
+    crowdsale
+      ✓ tracks the rate
+      ✓ tracks the wallet (44ms)
+      ✓ tracks the token
+
+
+  3 passing (1s)
+
+news-MacBook-Pro:ico_irl ashok$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   build/contracts/ZenexToken.json
+        modified:   contracts/ZenexToken.sol
+        modified:   migrations/2_deploy_crowedsale.js
+        modified:   package-lock.json
+        modified:   package.json
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        build/contracts/ZenexTokenCrowdsale.json
+        build/contracts/ZenexTokenCrowedsale.json
+        contracts/ZenexTokenCrowdsale.sol
+        test/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+news-MacBook-Pro:ico_irl ashok$ git add .
+news-MacBook-Pro:ico_irl ashok$ git commit -m "code update"
+[master 3c45952] code update
+ 10 files changed, 5255 insertions(+), 2557 deletions(-)
+ rewrite build/contracts/ZenexToken.json (64%)
+ create mode 100644 build/contracts/ZenexTokenCrowdsale.json
+ create mode 100644 build/contracts/ZenexTokenCrowedsale.json
+ rewrite contracts/ZenexToken.sol (71%)
+ create mode 100644 contracts/ZenexTokenCrowdsale.sol
+ create mode 100644 test/ZenexToken.test.js
+ create mode 100644 test/ZenexTokenCrowdsale.test.js
+news-MacBook-Pro:ico_irl ashok$ git push
+Counting objects: 17, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (16/16), done.
+Writing objects: 100% (17/17), 28.86 KiB | 1.80 MiB/s, done.
+Total 17 (delta 9), reused 0 (delta 0)
+remote: Resolving deltas: 100% (9/9), completed with 7 local objects.
+remote: 
+remote: GitHub found 3 vulnerabilities on Ashokhicas/ico_irl's default branch (3 moderate). To find out more, visit:
+remote:      https://github.com/Ashokhicas/ico_irl/network/alerts
+remote: 
+To https://github.com/Ashokhicas/ico_irl.git
+   65d01cf..3c45952  master -> master
+news-MacBook-Pro:ico_irl ashok$ ganache-cli help
+Network:
+  -p, --port              Port number to listen on                                              [number] [default: 8545]
+  -h, --host, --hostname  Hostname to listen on                                          [string] [default: "127.0.0.1"]
+  --keepAliveTimeout      The number of milliseconds of inactivity a server needs to wait for additional incoming data,
+                          after it has finished writing the last response, before a socket will be destroyed.
+                                                                                                [number] [default: 5000]
+
+Accounts:
+  -a, --accounts             Number of accounts to generate at startup                            [number] [default: 10]
+  -e, --defaultBalanceEther  Amount of ether to assign each test account                         [number] [default: 100]
+  --account                  Account data in the form '<private_key>,<initial_balance>', can be specified multiple
+                             times. Note that private keys are 64 characters long and must be entered as an 0x-prefixed
+                             hex string. Balance can either be input as an integer, or as a 0x-prefixed hex string with
+                             either form specifying the initial balance in wei.                                  [array]
+  --acctKeys                 saves generated accounts and private keys as JSON object in specified file
+                                                                                                [string] [default: null]
+  -n, --secure               Lock available accounts by default (good for third party transaction signing)
+                                                                                              [boolean] [default: false]
+  -u, --unlock               Comma-separated list of accounts or indices to unlock                               [array]
+
+Chain:
+  -k, --hardfork                Allows users to specify which hardfork should be used. Supported hardforks are
+                                `byzantium`, `constantinople`, and `petersburg` (default).
+                                                                                        [string] [default: "petersburg"]
+  -f, --fork                    Fork from another currently running Ethereum client at a given block. Input should be
+                                the HTTP location and port of the other client, e.g. 'http://localhost:8545' or
+                                optionally provide a block number 'http://localhost:8545@1599200'
+                                                                                               [string] [default: false]
+  --db                          Directory of chain database; creates one if it doesn't exist    [string] [default: null]
+  -s, --seed                    Arbitrary data to generate the HD wallet mnemonic to be used
+                                                                [string] [default: Random value, unless -d is specified]
+  -d, --deterministic           Generate deterministic addresses based on a pre-defined mnemonic.              [boolean]
+  -m, --mnemonic                bip39 mnemonic phrase for generating a PRNG seed, which is in turn used for hierarchical
+                                deterministic (HD) account generation                                           [string]
+  --noVMErrorsOnRPCResponse     Do not transmit transaction failures as RPC errors. Enable this flag for error reporting
+                                behaviour which is compatible with other clients such as geth and Parity.
+                                                                                              [boolean] [default: false]
+  -b, --blockTime               Block time in seconds for automatic mining. Will instantly mine a new block for every
+                                transaction if option omitted. Avoid using unless your test cases require a specific
+                                mining interval.                                                                [number]
+  -i, --networkId               The Network ID ganache-cli will use to identify itself.
+                      [number] [default: System time at process start or Network ID of forked blockchain if configured.]
+  -g, --gasPrice                The price of gas in wei                                  [number] [default: 20000000000]
+  -l, --gasLimit                The block gas limit in wei                                   [number] [default: 6721975]
+  --allowUnlimitedContractSize  Allows unlimited contract sizes while debugging. By enabling this flag, the check within
+                                the EVM for contract size limit of 24KB (see EIP-170) is bypassed. Enabling this flag
+                                *will* cause ganache-cli to behave differently than production environments.
+                                                                                              [boolean] [default: false]
+  -t, --time                    Date (ISO 8601) that the first block should start. Use this feature, along with the
+                                evm_increaseTime method to test time-dependent code.                            [string]
+
+Other:
+  --debug        Output VM opcodes for debugging                                              [boolean] [default: false]
+  -v, --verbose  Log all requests and responses to stdout                                     [boolean] [default: false]
+  --mem          Only show memory output, not tx history                                      [boolean] [default: false]
+  -q, --quiet    Run ganache quietly (no logs)                                                [boolean] [default: false]
+
+Options:
+  --help, -?  Show help                                                                                        [boolean]
+  --version   Show version number                                                                              [boolean]
+
+news-MacBook-Pro:ico_irl ashok$ ganache-cli -?
+Network:
+  -p, --port              Port number to listen on                                              [number] [default: 8545]
+  -h, --host, --hostname  Hostname to listen on                                          [string] [default: "127.0.0.1"]
+  --keepAliveTimeout      The number of milliseconds of inactivity a server needs to wait for additional incoming data,
+                          after it has finished writing the last response, before a socket will be destroyed.
+                                                                                                [number] [default: 5000]
+
+Accounts:
+  -a, --accounts             Number of accounts to generate at startup                            [number] [default: 10]
+  -e, --defaultBalanceEther  Amount of ether to assign each test account                         [number] [default: 100]
+  --account                  Account data in the form '<private_key>,<initial_balance>', can be specified multiple
+                             times. Note that private keys are 64 characters long and must be entered as an 0x-prefixed
+                             hex string. Balance can either be input as an integer, or as a 0x-prefixed hex string with
+                             either form specifying the initial balance in wei.                                  [array]
+  --acctKeys                 saves generated accounts and private keys as JSON object in specified file
+                                                                                                [string] [default: null]
+  -n, --secure               Lock available accounts by default (good for third party transaction signing)
+                                                                                              [boolean] [default: false]
+  -u, --unlock               Comma-separated list of accounts or indices to unlock                               [array]
+
+Chain:
+  -k, --hardfork                Allows users to specify which hardfork should be used. Supported hardforks are
+                                `byzantium`, `constantinople`, and `petersburg` (default).
+                                                                                        [string] [default: "petersburg"]
+  -f, --fork                    Fork from another currently running Ethereum client at a given block. Input should be
+                                the HTTP location and port of the other client, e.g. 'http://localhost:8545' or
+                                optionally provide a block number 'http://localhost:8545@1599200'
+                                                                                               [string] [default: false]
+  --db                          Directory of chain database; creates one if it doesn't exist    [string] [default: null]
+  -s, --seed                    Arbitrary data to generate the HD wallet mnemonic to be used
+                                                                [string] [default: Random value, unless -d is specified]
+  -d, --deterministic           Generate deterministic addresses based on a pre-defined mnemonic.              [boolean]
+  -m, --mnemonic                bip39 mnemonic phrase for generating a PRNG seed, which is in turn used for hierarchical
+                                deterministic (HD) account generation                                           [string]
+  --noVMErrorsOnRPCResponse     Do not transmit transaction failures as RPC errors. Enable this flag for error reporting
+                                behaviour which is compatible with other clients such as geth and Parity.
+                                                                                              [boolean] [default: false]
+  -b, --blockTime               Block time in seconds for automatic mining. Will instantly mine a new block for every
+                                transaction if option omitted. Avoid using unless your test cases require a specific
+                                mining interval.                                                                [number]
+  -i, --networkId               The Network ID ganache-cli will use to identify itself.
+                      [number] [default: System time at process start or Network ID of forked blockchain if configured.]
+  -g, --gasPrice                The price of gas in wei                                  [number] [default: 20000000000]
+  -l, --gasLimit                The block gas limit in wei                                   [number] [default: 6721975]
+  --allowUnlimitedContractSize  Allows unlimited contract sizes while debugging. By enabling this flag, the check within
+                                the EVM for contract size limit of 24KB (see EIP-170) is bypassed. Enabling this flag
+                                *will* cause ganache-cli to behave differently than production environments.
+                                                                                              [boolean] [default: false]
+  -t, --time                    Date (ISO 8601) that the first block should start. Use this feature, along with the
+                                evm_increaseTime method to test time-dependent code.                            [string]
+
+Other:
+  --debug        Output VM opcodes for debugging                                              [boolean] [default: false]
+  -v, --verbose  Log all requests and responses to stdout                                     [boolean] [default: false]
+  --mem          Only show memory output, not tx history                                      [boolean] [default: false]
+  -q, --quiet    Run ganache quietly (no logs)                                                [boolean] [default: false]
+
+Options:
+  --help, -?  Show help                                                                                        [boolean]
+  --version   Show version number                                                                              [boolean]
+
+news-MacBook-Pro:ico_irl ashok$ ganache-cli --accounts
+Ganache CLI v6.4.4 (ganache-core: 2.5.6)
+Error: listen EADDRINUSE: address already in use 127.0.0.1:8545
+news-MacBook-Pro:ico_irl ashok$ cd ..
+news-MacBook-Pro:dapps ashok$ pwd
+/Volumes/Drive/Workshops/Blockchain/dapps
+news-MacBook-Pro:dapps ashok$ mkdir token_sale
+news-MacBook-Pro:dapps ashok$ cd token_sale/
+news-MacBook-Pro:token_sale ashok$ truffle init
+
+✔ Preparing to download
+✔ Downloading
+news-MacBook-Pro:token_sale ashok$ touch contracts/ZenexToken.sol
+news-MacBook-Pro:token_sale ashok$ truffle compile
+
+Compiling your contracts...
+===========================
+> Compiling ./contracts/Migrations.sol
+> Compiling ./contracts/ZenexToken.sol
+> Artifacts written to /Volumes/Drive/Workshops/Blockchain/dapps/token_sale/build/contracts
+> Compiled successfully using:
+   - solc: 0.5.8+commit.23d335f2.Emscripten.clang
+
+news-MacBook-Pro:token_sale ashok$ truffle migrate
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+Starting migrations...
+======================
+> Network name:    'development'
+> Network id:      5777
+> Block gas limit: 0x6691b7
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > transaction hash:    0xb1e3911af99ff24878ff18f033a87f2a03c763278d234b3057c1b46ccc22b067
+   > Blocks: 1            Seconds: 5
+   > contract address:    0xBf58436F8D2D75c0a407695d541Aa842a3CBe8A9
+   > block number:        1
+   > block timestamp:     1562728719
+   > account:             0x3A975D5dE10fcaeAaE55497f370BfbCA8F8fdF98
+   > balance:             99.99477214
+   > gas used:            261393
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00522786 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00522786 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Deploying 'ZenexToken'
+   ----------------------
+   > transaction hash:    0x96f59c84b726cb86db34f0cd7f2674040045a5480c6803d2266829bf7299199a
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x2816BA497f010b4dC17a7d8AFaDD623e79bF47D0
+   > block number:        3
+   > block timestamp:     1562728727
+   > account:             0x3A975D5dE10fcaeAaE55497f370BfbCA8F8fdF98
+   > balance:             99.99176902
+   > gas used:            108133
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00216266 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00216266 ETH
+
+
+Summary
+=======
+> Total deployments:   2
+> Final cost:          0.00739052 ETH
+
+news-MacBook-Pro:token_sale ashok$ truffle console
+truffle(development)> ZenexToken.deployed().then((t) => { token = t } )
+undefined
+truffle(development)> token.totalSupply()
+BN {
+  negative: 0,
+  words: [ 1000000, <1 empty item> ],
+  length: 1,
+  red: null
+}
+truffle(development)> token.totalSupply().then((v) => { console.log(v.toNumber()) })
+1000000
+undefined
+truffle(development)> 
