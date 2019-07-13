@@ -41,12 +41,12 @@ contract ("ZenexToken", function(accounts){
         }).then(function(success) {
             assert.equal(success, true, 'it returns true');
             return tokenInstance.transfer(accounts[1], 250000, {from: accounts[0]});
-        }).then(function(reciept) {
-            assert.equal(reciept.logs.length, 1, 'triggers event');
-            assert.equal(reciept.logs[0].event, 'Transfer', 'should be the "Transfer" event');
-            assert.equal(reciept.logs[0].args._from, accounts[0], 'logs the account of sender');
-            assert.equal(reciept.logs[0].args._to, accounts[1], 'logs the account of reciever');
-            assert.equal(reciept.logs[0].args._value, 250000, 'logs the transfer amount');
+        }).then(function(receipt) {
+            assert.equal(receipt.logs.length, 1, 'triggers event');
+            assert.equal(receipt.logs[0].event, 'Transfer', 'should be the "Transfer" event');
+            assert.equal(receipt.logs[0].args._from, accounts[0], 'logs the account of sender');
+            assert.equal(receipt.logs[0].args._to, accounts[1], 'logs the account of reciever');
+            assert.equal(receipt.logs[0].args._value, 250000, 'logs the transfer amount');
             return tokenInstance.balanceOf(accounts[1]);
         }).then(function(balance) {
             assert.equal(balance.toNumber(), 250000, 'it adds the amount in recievers account');
@@ -63,12 +63,12 @@ contract ("ZenexToken", function(accounts){
         }).then(function(success) {
             assert.equal(success, true, 'it returns true');
             return tokenInstance.approve(accounts[1], 100, {from: accounts[0]});
-        }).then(function(reciept) {
-            assert.equal(reciept.logs.length, 1, 'triggers event');
-            assert.equal(reciept.logs[0].event, 'Approval', 'should be the "Approval" event');
-            assert.equal(reciept.logs[0].args._owner, accounts[0], 'logs the account the tokens are authorized by');
-            assert.equal(reciept.logs[0].args._spender, accounts[1], 'logs the account the tokens are authorized to');
-            assert.equal(reciept.logs[0].args._value, 100, 'logs the transfer amount');
+        }).then(function(receipt) {
+            assert.equal(receipt.logs.length, 1, 'triggers event');
+            assert.equal(receipt.logs[0].event, 'Approval', 'should be the "Approval" event');
+            assert.equal(receipt.logs[0].args._owner, accounts[0], 'logs the account the tokens are authorized by');
+            assert.equal(receipt.logs[0].args._spender, accounts[1], 'logs the account the tokens are authorized to');
+            assert.equal(receipt.logs[0].args._value, 100, 'logs the transfer amount');
             return tokenInstance.allowance(accounts[0], accounts[1]);
         }).then(function(allowance) {
             assert.equal(allowance.toNumber(), 100, 'stores the allowance for delegated transfer');
@@ -82,10 +82,10 @@ contract ("ZenexToken", function(accounts){
             toAccount = accounts[3];
             spendingAccount = accounts[4];
             return tokenInstance.transfer(fromAccount, 100, {from: accounts[0]});
-        }).then(function(reciept) {
+        }).then(function(receipt) {
             //Approve spending account to sepnd 10 tokens
             return tokenInstance.approve(spendingAccount, 10, {from: fromAccount});
-        }).then(function(reciept) {
+        }).then(function(receipt) {
             //Try transfering something larger than spnder's balance
             return tokenInstance.transferFrom(fromAccount, toAccount, 9999, {from: spendingAccount});
         }).then(assert.fail).catch(function(error) {
@@ -98,12 +98,12 @@ contract ("ZenexToken", function(accounts){
         }).then(function(success) {
             assert.equal(success, true, 'it returns true');
             return tokenInstance.transferFrom(fromAccount, toAccount, 10, {from: spendingAccount});
-        }).then(function(reciept) {
-            assert.equal(reciept.logs.length, 1, 'triggers event');
-            assert.equal(reciept.logs[0].event, 'Transfer', 'should be the "Transfer" event');
-            assert.equal(reciept.logs[0].args._from, fromAccount, 'logs the account tokens are transfered from');
-            assert.equal(reciept.logs[0].args._to, toAccount, 'logs the account tokens are transfered to');
-            assert.equal(reciept.logs[0].args._value, 10, 'logs the transfer amount');
+        }).then(function(receipt) {
+            assert.equal(receipt.logs.length, 1, 'triggers event');
+            assert.equal(receipt.logs[0].event, 'Transfer', 'should be the "Transfer" event');
+            assert.equal(receipt.logs[0].args._from, fromAccount, 'logs the account tokens are transfered from');
+            assert.equal(receipt.logs[0].args._to, toAccount, 'logs the account tokens are transfered to');
+            assert.equal(receipt.logs[0].args._value, 10, 'logs the transfer amount');
             return tokenInstance.balanceOf(fromAccount);
         }).then(function(balance) {
             assert.equal(balance.toNumber(), 90, 'it deducts the amount from senders account');
