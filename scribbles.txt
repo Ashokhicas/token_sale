@@ -1009,3 +1009,1077 @@ truffle(development)> token.totalSupply().then((v) => { console.log(v.toNumber()
 1000000
 undefined
 truffle(development)> 
+
+
+----------
+
+
+
+  Contract: ZenexToken
+    ✓ initializes with correct values (621ms)
+    ✓ allocates the initial supply pon deployment (238ms)
+    ✓ transfers ownership (949ms)
+    ✓ approves token for delegates the transfer (550ms)
+    1) it handles delegated transfer
+
+    Events emitted during test:
+    ---------------------------
+
+    Transfer(_from: <indexed> 0x3A975D5dE10fcaeAaE55497f370BfbCA8F8fdF98 (address), _to: <indexed> 0x96C8C010d08ACe1e076DB4D218fA7C092Ac20c31 (address), _value: 100 (uint256))
+    Approval(_owner: <indexed> 0x96C8C010d08ACe1e076DB4D218fA7C092Ac20c31 (address), _spender: <indexed> 0xB6e18d2Faae9617FD6985575F42B77A01e1C2846 (address), _value: 10 (uint256))
+    Transfer(_from: <indexed> 0x96C8C010d08ACe1e076DB4D218fA7C092Ac20c31 (address), _to: <indexed> 0xF87C97DfdC3eA02A39327960166f37499085f995 (address), _value: 10 (uint256))
+
+    ---------------------------
+
+
+  4 passing (5s)
+  1 failing
+
+  1) Contract: ZenexToken
+       it handles delegated transfer:
+     AssertionError: deducts the amount from allowance: expected <BN: a> to equal 0
+      at test/ZenexToken.test.js:115:20
+      at processTicksAndRejections (internal/process/task_queues.js:89:5)
+
+
+
+news-MacBook-Pro:token_sale ashok$ truffle test
+Using network 'development'.
+
+
+Compiling your contracts...
+===========================
+> Compiling ./contracts/ZenexToken.sol
+> Artifacts written to /var/folders/ct/cpv82d352snfj426ryjc9jk80000gn/T/test-119612-41847-16my3vy.mo3ei
+> Compiled successfully using:
+   - solc: 0.5.8+commit.23d335f2.Emscripten.clang
+
+
+
+  Contract: ZenexToken
+    ✓ initializes with correct values (538ms)
+    ✓ allocates the initial supply pon deployment (317ms)
+    ✓ transfers ownership (1006ms)
+    ✓ approves token for delegates the transfer (672ms)
+    1) it handles delegated transfer
+
+    Events emitted during test:
+    ---------------------------
+
+    Transfer(_from: <indexed> 0x3A975D5dE10fcaeAaE55497f370BfbCA8F8fdF98 (address), _to: <indexed> 0x96C8C010d08ACe1e076DB4D218fA7C092Ac20c31 (address), _value: 100 (uint256))
+    Approval(_owner: <indexed> 0x96C8C010d08ACe1e076DB4D218fA7C092Ac20c31 (address), _spender: <indexed> 0xB6e18d2Faae9617FD6985575F42B77A01e1C2846 (address), _value: 10 (uint256))
+    Transfer(_from: <indexed> 0x96C8C010d08ACe1e076DB4D218fA7C092Ac20c31 (address), _to: <indexed> 0xF87C97DfdC3eA02A39327960166f37499085f995 (address), _value: 10 (uint256))
+
+    ---------------------------
+
+
+  4 passing (6s)
+  1 failing
+
+  1) Contract: ZenexToken
+       it handles delegated transfer:
+
+      deducts the amount from allowance
+      + expected - actual
+
+      -10
+      +0
+      
+      at test/ZenexToken.test.js:115:20
+      at processTicksAndRejections (internal/process/task_queues.js:89:5)
+
+
+
+news-MacBook-Pro:token_sale ashok$ truffle test
+Using network 'development'.
+
+
+Compiling your contracts...
+===========================
+> Compiling ./contracts/ZenexToken.sol
+> Artifacts written to /var/folders/ct/cpv82d352snfj426ryjc9jk80000gn/T/test-119612-41868-vsqek0.2qbgj
+> Compiled successfully using:
+   - solc: 0.5.8+commit.23d335f2.Emscripten.clang
+
+
+
+  Contract: ZenexToken
+    ✓ initializes with correct values (292ms)
+    ✓ allocates the initial supply pon deployment (149ms)
+    ✓ transfers ownership (631ms)
+    ✓ approves token for delegates the transfer (303ms)
+    ✓ it handles delegated transfer (1367ms)
+
+
+  5 passing (3s)
+
+news-MacBook-Pro:token_sale ashok$ git add .
+news-MacBook-Pro:token_sale ashok$ git commit -m "added allowance, trasferfrom code"
+[master f2d439d] added allowance, trasferfrom code
+ 2 files changed, 89 insertions(+)
+news-MacBook-Pro:token_sale ashok$ git push
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 1.95 KiB | 1.95 MiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Ashokhicas/token_sale.git
+   6ad4d77..f2d439d  master -> master
+news-MacBook-Pro:token_sale ashok$ git branch
+* master
+news-MacBook-Pro:token_sale ashok$ truffle migrate --reset
+
+Compiling your contracts...
+===========================
+> Compiling ./contracts/ZenexToken.sol
+> Artifacts written to /Volumes/Drive/Workshops/Blockchain/dapps/token_sale/build/contracts
+> Compiled successfully using:
+   - solc: 0.5.8+commit.23d335f2.Emscripten.clang
+
+
+Starting migrations...
+======================
+> Network name:    'development'
+> Network id:      5777
+> Block gas limit: 0x6691b7
+
+
+1_initial_migration.js
+======================
+
+   Replacing 'Migrations'
+   ----------------------
+   > transaction hash:    0xcef9dfc43343dff8e5b185a4e214453dd7e62335116eab6a2994cf95872e804b
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x7a36626691a458E9774eb8DFD7790a50A468af4E
+   > block number:        412
+   > block timestamp:     1562983941
+   > account:             0x3A975D5dE10fcaeAaE55497f370BfbCA8F8fdF98
+   > balance:             98.71745422
+   > gas used:            261393
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00522786 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00522786 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Replacing 'ZenexToken'
+   ----------------------
+   > transaction hash:    0x98ea73090fc2af76fdc5788aec0fe69df031b3db3a8282e457eb9465b7fab879
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x4BE2355A821325B20302a5Ae5F0F6eC5e985cFFA
+   > block number:        414
+   > block timestamp:     1562983942
+   > account:             0x3A975D5dE10fcaeAaE55497f370BfbCA8F8fdF98
+   > balance:             98.6973548
+   > gas used:            962948
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.01925896 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.01925896 ETH
+
+
+Summary
+=======
+> Total deployments:   2
+> Final cost:          0.02448682 ETH
+
+news-MacBook-Pro:token_sale ashok$ truffle console
+truffle(development)> ZenexToken.deployed().then((i) => { instance = i; })
+undefined
+truffle(development)> instance.name
+[Function] {
+  call: [Function],
+  sendTransaction: [Function],
+  estimateGas: [Function],
+  request: [Function]
+}
+truffle(development)> instance.name()
+'Zenex Token'
+truffle(development)> instance.address
+'0x4BE2355A821325B20302a5Ae5F0F6eC5e985cFFA'
+truffle(development)> instance.totalSupply()
+BN {
+  negative: 0,
+  words: [ 1000000, <1 empty item> ],
+  length: 1,
+  red: null
+}
+truffle(development)> instance.totalSupply().toNumber()
+Thrown:
+evalmachine.<anonymous>:0
+instance.totalSupply().toNumber()
+                       ^
+
+TypeError: instance.totalSupply(...).toNumber is not a function
+    at evalmachine.<anonymous>:0:24
+    at Script.runInContext (vm.js:134:20)
+    at runScript (/usr/local/lib/node_modules/truffle/build/webpack:/packages/truffle-core/lib/console.js:218:1)
+    at Console.interpret (/usr/local/lib/node_modules/truffle/build/webpack:/packages/truffle-core/lib/console.js:232:1)
+    at ReplManager.interpret (/usr/local/lib/node_modules/truffle/build/webpack:/packages/truffle-core/lib/repl.js:118:1)
+    at bound (domain.js:415:14)
+    at REPLServer.runBound [as eval] (domain.js:428:12)
+    at REPLServer.onLine (repl.js:700:10)
+    at REPLServer.emit (events.js:200:13)
+    at REPLServer.EventEmitter.emit (domain.js:471:20)
+truffle(development)> instance.totalSupply().then((s) => { supply =s; })
+undefined
+truffle(development)> supply
+BN {
+  negative: 0,
+  words: [ 1000000, <1 empty item> ],
+  length: 1,
+  red: null
+}
+truffle(development)> supply.toNumber()
+1000000
+truffle(development)> web3.eth.accounts
+Accounts {
+  currentProvider: [Getter/Setter],
+  _requestManager: RequestManager {
+    provider: HttpProvider {
+      host: 'http://127.0.0.1:7545',
+      httpAgent: [Agent],
+      timeout: 0,
+      headers: undefined,
+      connected: true,
+      send: [Function],
+      _alreadyWrapped: true
+    },
+    providers: {
+      WebsocketProvider: [Function: WebsocketProvider],
+      HttpProvider: [Function: HttpProvider],
+      IpcProvider: [Function: IpcProvider]
+    },
+    subscriptions: {}
+  },
+  givenProvider: null,
+  providers: {
+    WebsocketProvider: [Function: WebsocketProvider],
+    HttpProvider: [Function: HttpProvider],
+    IpcProvider: [Function: IpcProvider]
+  },
+  _provider: HttpProvider {
+    host: 'http://127.0.0.1:7545',
+    httpAgent: Agent {
+      _events: [Object: null prototype],
+      _eventsCount: 1,
+      _maxListeners: undefined,
+      defaultPort: 80,
+      protocol: 'http:',
+      options: [Object],
+      requests: {},
+      sockets: {},
+      freeSockets: {},
+      keepAliveMsecs: 1000,
+      keepAlive: false,
+      maxSockets: Infinity,
+      maxFreeSockets: 256
+    },
+    timeout: 0,
+    headers: undefined,
+    connected: true,
+    send: [Function],
+    _alreadyWrapped: true
+  },
+  setProvider: [Function],
+  _ethereumCall: {
+    getId: [Function: send] {
+      method: [Method],
+      request: [Function: bound ],
+      call: 'net_version'
+    },
+    getGasPrice: [Function: send] {
+      method: [Method],
+      request: [Function: bound ],
+      call: 'eth_gasPrice'
+    },
+    getTransactionCount: [Function: send] {
+      method: [Method],
+      request: [Function: bound ],
+      call: 'eth_getTransactionCount'
+    }
+  },
+  wallet: Wallet {
+    _accounts: [Circular],
+    length: 0,
+    defaultKeyName: 'web3js_wallet'
+  }
+}
+truffle(development)> web3.eth.accounts.then((a) => { accounts =a; })
+Thrown:
+evalmachine.<anonymous>:0
+web3.eth.accounts.then((a) => { accounts =a; })
+                  ^
+
+TypeError: web3.eth.accounts.then is not a function
+    at evalmachine.<anonymous>:0:19
+    at Script.runInContext (vm.js:134:20)
+    at runScript (/usr/local/lib/node_modules/truffle/build/webpack:/packages/truffle-core/lib/console.js:218:1)
+    at Console.interpret (/usr/local/lib/node_modules/truffle/build/webpack:/packages/truffle-core/lib/console.js:232:1)
+    at ReplManager.interpret (/usr/local/lib/node_modules/truffle/build/webpack:/packages/truffle-core/lib/repl.js:118:1)
+    at bound (domain.js:415:14)
+    at REPLServer.runBound [as eval] (domain.js:428:12)
+    at REPLServer.onLine (repl.js:700:10)
+    at REPLServer.emit (events.js:200:13)
+    at REPLServer.EventEmitter.emit (domain.js:471:20)
+truffle(development)> .clear
+Clearing context...
+truffle(development)> instance.getAccounts().then((a) => { accounts =a; })
+Thrown:
+evalmachine.<anonymous>:0
+instance.getAccounts().then((a) => { accounts =a; })
+^
+
+ReferenceError: instance is not defined
+    at evalmachine.<anonymous>:0:1
+    at Script.runInContext (vm.js:134:20)
+    at runScript (/usr/local/lib/node_modules/truffle/build/webpack:/packages/truffle-core/lib/console.js:218:1)
+    at Console.interpret (/usr/local/lib/node_modules/truffle/build/webpack:/packages/truffle-core/lib/console.js:232:1)
+    at ReplManager.interpret (/usr/local/lib/node_modules/truffle/build/webpack:/packages/truffle-core/lib/repl.js:118:1)
+    at bound (domain.js:415:14)
+    at REPLServer.runBound [as eval] (domain.js:428:12)
+    at REPLServer.onLine (repl.js:700:10)
+    at REPLServer.emit (events.js:200:13)
+    at REPLServer.EventEmitter.emit (domain.js:471:20)
+truffle(development)> ZenexToken.deployed().then((i) => { instance = i; })
+Thrown:
+evalmachine.<anonymous>:0
+ZenexToken.deployed().then((i) => { instance = i; })
+^
+
+ReferenceError: ZenexToken is not defined
+news-MacBook-Pro:token_sale ashok$ truffle console
+truffle(development)> ZenexToken.deployed().then((i) => { tokenInstance = i; })
+undefined
+truffle(development)> tokenInstance
+TruffleContract {
+  constructor: [Function: TruffleContract] {
+    _constructorMethods: {
+      setProvider: [Function: setProvider],
+      new: [Function: new],
+      at: [AsyncFunction: at],
+      deployed: [AsyncFunction: deployed],
+      defaults: [Function: defaults],
+      hasNetwork: [Function: hasNetwork],
+      isDeployed: [Function: isDeployed],
+      detectNetwork: [AsyncFunction: detectNetwork],
+      setNetwork: [Function: setNetwork],
+      setNetworkType: [Function: setNetworkType],
+      setWallet: [Function: setWallet],
+      resetAddress: [Function: resetAddress],
+      link: [Function: link],
+      clone: [Function: clone],
+      addProp: [Function: addProp],
+      toJSON: [Function: toJSON],
+      decodeLogs: [Function: decodeLogs]
+    },
+    _properties: {
+      contract_name: [Object],
+      contractName: [Object],
+      gasMultiplier: [Object],
+      timeoutBlocks: [Object],
+      autoGas: [Object],
+      numberFormat: [Object],
+      abi: [Object],
+      metadata: [Function: metadata],
+      network: [Function: network],
+      networks: [Function: networks],
+      address: [Object],
+      transactionHash: [Object],
+      links: [Function: links],
+      events: [Function: events],
+      binary: [Function: binary],
+      deployedBinary: [Function: deployedBinary],
+      unlinked_binary: [Object],
+      bytecode: [Object],
+      deployedBytecode: [Object],
+      sourceMap: [Object],
+      deployedSourceMap: [Object],
+      source: [Object],
+      sourcePath: [Object],
+      legacyAST: [Object],
+      ast: [Object],
+      compiler: [Object],
+      schema_version: [Function: schema_version],
+      schemaVersion: [Function: schemaVersion],
+      updated_at: [Function: updated_at],
+      updatedAt: [Function: updatedAt],
+      userdoc: [Function: userdoc],
+      devdoc: [Function: devdoc]
+    },
+    _property_values: {},
+    _json: {
+      contractName: 'ZenexToken',
+      abi: [Array],
+      metadata: '{"compiler":{"version":"0.5.8+commit.23d335f2"},"language":"Solidity","output":{"abi":[{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_value","type":"uint256"}],"name":"approve","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transferFrom","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"standard","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"balanceOf","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"},{"name":"","type":"address"}],"name":"allowance","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[{"name":"_initialSupply","type":"uint256"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_from","type":"address"},{"indexed":true,"name":"_to","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_owner","type":"address"},{"indexed":true,"name":"_spender","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"Approval","type":"event"}],"devdoc":{"methods":{}},"userdoc":{"methods":{}}},"settings":{"compilationTarget":{"/Volumes/Drive/Workshops/Blockchain/dapps/token_sale/contracts/ZenexToken.sol":"ZenexToken"},"evmVersion":"petersburg","libraries":{},"optimizer":{"enabled":false,"runs":200},"remappings":[]},"sources":{"/Volumes/Drive/Workshops/Blockchain/dapps/token_sale/contracts/ZenexToken.sol":{"keccak256":"0x179b83b1754b770e126aafb30cbdcc6fd69ffadb489212b6f707d800ac0b0604","urls":["bzzr://3ba78a68d2f21ce630ae9c4462359da6016d0a7fd111832520edd6375807fe11"]}},"version":1}',
+      bytecode: '0x60806040526040518060400160405280600b81526020017f5a656e657820546f6b656e0000000000000000000000000000000000000000008152506000908051906020019061004f929190610176565b506040518060400160405280600481526020017f5a454e54000000000000000000000000000000000000000000000000000000008152506001908051906020019061009b929190610176565b506040518060400160405280601081526020017f5a656e657820546f6b656e2076312e3000000000000000000000000000000000815250600290805190602001906100e7929190610176565b503480156100f457600080fd5b50604051602080610d888339810180604052602081101561011457600080fd5b810190808051906020019092919050505080600460003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002081905550806003819055505061021b565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106101b757805160ff19168380011785556101e5565b828001600101855582156101e5579182015b828111156101e45782518255916020019190600101906101c9565b5b5090506101f291906101f6565b5090565b61021891905b808211156102145760008160009055506001016101fc565b5090565b90565b610b5e8061022a6000396000f3fe608060405234801561001057600080fd5b50600436106100935760003560e01c80635a3b7e42116100665780635a3b7e421461022557806370a08231146102a857806395d89b4114610300578063a9059cbb14610383578063dd62ed3e146103e957610093565b806306fdde0314610098578063095ea7b31461011b57806318160ddd1461018157806323b872dd1461019f575b600080fd5b6100a0610461565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100e05780820151818401526020810190506100c5565b50505050905090810190601f16801561010d5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6101676004803603604081101561013157600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803590602001909291905050506104ff565b604051808215151515815260200191505060405180910390f35b6101896105f1565b6040518082815260200191505060405180910390f35b61020b600480360360608110156101b557600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803590602001909291905050506105f7565b604051808215151515815260200191505060405180910390f35b61022d610862565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561026d578082015181840152602081019050610252565b50505050905090810190601f16801561029a5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6102ea600480360360208110156102be57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610900565b6040518082815260200191505060405180910390f35b610308610918565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561034857808201518184015260208101905061032d565b50505050905090810190601f1680156103755780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6103cf6004803603604081101561039957600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803590602001909291905050506109b6565b604051808215151515815260200191505060405180910390f35b61044b600480360360408110156103ff57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610b0d565b6040518082815260200191505060405180910390f35b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156104f75780601f106104cc576101008083540402835291602001916104f7565b820191906000526020600020905b8154815290600101906020018083116104da57829003601f168201915b505050505081565b600081600560003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055508273ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff167f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925846040518082815260200191505060405180910390a36001905092915050565b60035481565b6000600460008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205482111561064557600080fd5b600560008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020548211156106ce57600080fd5b81600460008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000828254039250508190555081600460008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000828254019250508190555081600560008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825403925050819055508273ffffffffffffffffffffffffffffffffffffffff168473ffffffffffffffffffffffffffffffffffffffff167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef846040518082815260200191505060405180910390a3600190509392505050565b60028054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156108f85780601f106108cd576101008083540402835291602001916108f8565b820191906000526020600020905b8154815290600101906020018083116108db57829003601f168201915b505050505081565b60046020528060005260406000206000915090505481565b60018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156109ae5780601f10610983576101008083540402835291602001916109ae565b820191906000526020600020905b81548152906001019060200180831161099157829003601f168201915b505050505081565b600081600460003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020541015610a0457600080fd5b81600460003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000828254039250508190555081600460008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825401925050819055508273ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef846040518082815260200191505060405180910390a36001905092915050565b600560205281600052604060002060205280600052604060002060009150915050548156fea165627a7a72305820bd083ada4e2739837b736a3b9733cedf18a9d5092fd02ec0cacd4f3d76bfd6ee0029',
+      deployedBytecode: '0x608060405234801561001057600080fd5b50600436106100935760003560e01c80635a3b7e42116100665780635a3b7e421461022557806370a08231146102a857806395d89b4114610300578063a9059cbb14610383578063dd62ed3e146103e957610093565b806306fdde0314610098578063095ea7b31461011b57806318160ddd1461018157806323b872dd1461019f575b600080fd5b6100a0610461565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100e05780820151818401526020810190506100c5565b50505050905090810190601f16801561010d5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6101676004803603604081101561013157600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803590602001909291905050506104ff565b604051808215151515815260200191505060405180910390f35b6101896105f1565b6040518082815260200191505060405180910390f35b61020b600480360360608110156101b557600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803590602001909291905050506105f7565b604051808215151515815260200191505060405180910390f35b61022d610862565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561026d578082015181840152602081019050610252565b50505050905090810190601f16801561029a5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6102ea600480360360208110156102be57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610900565b6040518082815260200191505060405180910390f35b610308610918565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561034857808201518184015260208101905061032d565b50505050905090810190601f1680156103755780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6103cf6004803603604081101561039957600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803590602001909291905050506109b6565b604051808215151515815260200191505060405180910390f35b61044b600480360360408110156103ff57600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610b0d565b6040518082815260200191505060405180910390f35b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156104f75780601f106104cc576101008083540402835291602001916104f7565b820191906000526020600020905b8154815290600101906020018083116104da57829003601f168201915b505050505081565b600081600560003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055508273ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff167f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925846040518082815260200191505060405180910390a36001905092915050565b60035481565b6000600460008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205482111561064557600080fd5b600560008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020548211156106ce57600080fd5b81600460008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000828254039250508190555081600460008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000828254019250508190555081600560008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002060003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825403925050819055508273ffffffffffffffffffffffffffffffffffffffff168473ffffffffffffffffffffffffffffffffffffffff167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef846040518082815260200191505060405180910390a3600190509392505050565b60028054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156108f85780601f106108cd576101008083540402835291602001916108f8565b820191906000526020600020905b8154815290600101906020018083116108db57829003601f168201915b505050505081565b60046020528060005260406000206000915090505481565b60018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156109ae5780601f10610983576101008083540402835291602001916109ae565b820191906000526020600020905b81548152906001019060200180831161099157829003601f168201915b505050505081565b600081600460003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020541015610a0457600080fd5b81600460003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000828254039250508190555081600460008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825401925050819055508273ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef846040518082815260200191505060405180910390a36001905092915050565b600560205281600052604060002060205280600052604060002060009150915050548156fea165627a7a72305820bd083ada4e2739837b736a3b9733cedf18a9d5092fd02ec0cacd4f3d76bfd6ee0029',
+      sourceMap: '34:1679:1:-;;;58:34;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;96:29;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;129:43;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;558:156;8:9:-1;5:2;;;30:1;27;20:12;5:2;558:156:1;;;;;;;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;558:156:1;;;;;;;;;;;;;;;;631:14;607:9;:21;617:10;607:21;;;;;;;;;;;;;;;:38;;;;665:14;651:11;:28;;;;558:156;34:1679;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;',
+      deployedSourceMap: '34:1679:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;34:1679:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;58:34;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;58:34:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1109:204;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1109:204:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;197:26;;;:::i;:::-;;;;;;;;;;;;;;;;;;;1334:371;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1334:371:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;129:43;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;129:43:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;227:44;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;227:44:1;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;96:29;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;96:29:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;817:267;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;817:267:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;275:65;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;275:65:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;58:34;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;1109:204::-;1176:12;1232:6;1198:9;:21;1208:10;1198:21;;;;;;;;;;;;;;;:31;1220:8;1198:31;;;;;;;;;;;;;;;:40;;;;1272:8;1251:38;;1260:10;1251:38;;;1282:6;1251:38;;;;;;;;;;;;;;;;;;1304:4;1297:11;;1109:204;;;;:::o;197:26::-;;;;:::o;1334:371::-;1416:12;1456:9;:16;1466:5;1456:16;;;;;;;;;;;;;;;;1446:6;:26;;1438:35;;;;;;1499:9;:16;1509:5;1499:16;;;;;;;;;;;;;;;:28;1516:10;1499:28;;;;;;;;;;;;;;;;1489:6;:38;;1481:47;;;;;;1556:6;1536:9;:16;1546:5;1536:16;;;;;;;;;;;;;;;;:26;;;;;;;;;;;1588:6;1570:9;:14;1580:3;1570:14;;;;;;;;;;;;;;;;:24;;;;;;;;;;;1634:6;1602:9;:16;1612:5;1602:16;;;;;;;;;;;;;;;:28;1619:10;1602:28;;;;;;;;;;;;;;;;:38;;;;;;;;;;;1669:3;1653:28;;1662:5;1653:28;;;1674:6;1653:28;;;;;;;;;;;;;;;;;;1696:4;1689:11;;1334:371;;;;;:::o;129:43::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;227:44::-;;;;;;;;;;;;;;;;;:::o;96:29::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;817:267::-;880:12;935:6;910:9;:21;920:10;910:21;;;;;;;;;;;;;;;;:31;;902:40;;;;;;975:6;950:9;:21;960:10;950:21;;;;;;;;;;;;;;;;:31;;;;;;;;;;;1007:6;989:9;:14;999:3;989:14;;;;;;;;;;;;;;;;:24;;;;;;;;;;;1048:3;1027:33;;1036:10;1027:33;;;1053:6;1027:33;;;;;;;;;;;;;;;;;;1075:4;1068:11;;817:267;;;;:::o;275:65::-;;;;;;;;;;;;;;;;;;;;;;;;;;:::o',
+      source: 'pragma solidity >=0.4.21 <0.6.0;\n\ncontract ZenexToken {\n  string ' +
+        "public name = 'Zenex Token';\n  string public symbol = 'ZENT';\n  " +
+        "string public standard = 'Zenex Token v1.0';\n\n  //transfer event\n\n  " +
+        'uint256 public totalSupply;\n  mapping(address => uint256) public ' +
+        'balanceOf;\n  mapping(address => mapping (address => uint256)) public ' +
+        'allowance;\n\n\n  event Transfer(  \n      address indexed _from,\n      ' +
+        'address indexed _to,\n      uint256 _value\n  );\n\n  event Approval(  \n  ' +
+        '    address indexed _owner,\n      address indexed _spender,\n      ' +
+        'uint256 _value\n  );\n\n  constructor(uint256 _initialSupply) public {\n  ' +
+        '  balanceOf[msg.sender] = _initialSupply;\n    totalSupply = ' +
+        '_initialSupply;\n    //allocate initial supply\n  }\n\n  //transfer ' +
+        'function\n  //exception if not enough token\n  //event emit\n  //return ' +
+        'a boolean value\n\n  function transfer(address _to, uint256 _value) ' +
+        'public returns (bool success) {\n      require(balanceOf[msg.sender] ' +
+        '>= _value);\n      balanceOf[msg.sender] -= _value;\n      ' +
+        'balanceOf[_to] += _value;\n\n      emit Transfer(msg.sender, _to, ' +
+        '_value);\n      return true;\n  }\n\n  //approve function\n  function ' +
+        'approve(address _spender, uint256 _value) public returns (bool ' +
+        'success) {\n      allowance[msg.sender][_spender] = _value;\n      emit ' +
+        'Approval(msg.sender, _spender, _value);\n      return true;\n  }\n  ' +
+        '//transfer from\n  function transferFrom(address _from, address _to, ' +
+        'uint256 _value) public returns (bool success) {\n      require(_value ' +
+        '<= balanceOf[_from]);\n      require(_value <= ' +
+        'allowance[_from][msg.sender]);\n      balanceOf[_from] -= _value;\n     ' +
+        ' balanceOf[_to] += _value;\n      allowance[_from][msg.sender] -= ' +
+        '_value;\n      emit Transfer(_from, _to, _value);\n      return true;\n  ' +
+        '}\n  //\n\n}',
+      sourcePath: '/Volumes/Drive/Workshops/Blockchain/dapps/token_sale/contracts/ZenexToken.sol',
+      ast: [Object],
+      legacyAST: [Object],
+      compiler: [Object],
+      networks: [Object],
+      schemaVersion: '3.0.11',
+      updatedAt: '2019-07-13T02:12:22.851Z',
+      devdoc: [Object],
+      userdoc: [Object]
+    },
+    setProvider: [Function: bound setProvider],
+    new: [Function: bound new] {
+      estimateGas: [Function: bound estimateDeployment]
+    },
+    at: [Function: bound at] AsyncFunction,
+    deployed: [Function: bound deployed] AsyncFunction,
+    defaults: [Function: bound defaults],
+    hasNetwork: [Function: bound hasNetwork],
+    isDeployed: [Function: bound isDeployed],
+    detectNetwork: [Function: bound detectNetwork] AsyncFunction,
+    setNetwork: [Function: bound setNetwork],
+    setNetworkType: [Function: bound setNetworkType],
+    setWallet: [Function: bound setWallet],
+    resetAddress: [Function: bound resetAddress],
+    link: [Function: bound link],
+    clone: [Function: bound clone],
+    addProp: [Function: bound addProp],
+    toJSON: [Function: bound toJSON],
+    decodeLogs: [Function: bound decodeLogs],
+    web3: Web3Shim {
+      currentProvider: [Getter/Setter],
+      _requestManager: [RequestManager],
+      givenProvider: null,
+      providers: [Object],
+      _provider: [HttpProvider],
+      setProvider: [Function],
+      BatchRequest: [Function: bound Batch],
+      extend: [Function],
+      version: '1.0.0-beta.37',
+      utils: [Object],
+      eth: [Eth],
+      shh: [Shh],
+      bzz: [Bzz],
+      networkType: undefined
+    },
+    class_defaults: {
+      from: '0x3A975D5dE10fcaeAaE55497f370BfbCA8F8fdF98',
+      gas: 6721975,
+      gasPrice: 20000000000
+    },
+    currentProvider: HttpProvider {
+      host: 'http://127.0.0.1:7545',
+      httpAgent: [Agent],
+      timeout: 0,
+      headers: undefined,
+      connected: true,
+      send: [Function],
+      _alreadyWrapped: true
+    },
+    network_id: '5777',
+    networkType: undefined
+  },
+  methods: {
+    'name()': [Function] {
+      call: [Function],
+      sendTransaction: [Function],
+      estimateGas: [Function],
+      request: [Function]
+    },
+    'totalSupply()': [Function] {
+      call: [Function],
+      sendTransaction: [Function],
+      estimateGas: [Function],
+      request: [Function]
+    },
+    'standard()': [Function] {
+      call: [Function],
+      sendTransaction: [Function],
+      estimateGas: [Function],
+      request: [Function]
+    },
+    'balanceOf(address)': [Function] {
+      call: [Function],
+      sendTransaction: [Function],
+      estimateGas: [Function],
+      request: [Function]
+    },
+    'symbol()': [Function] {
+      call: [Function],
+      sendTransaction: [Function],
+      estimateGas: [Function],
+      request: [Function]
+    },
+    'allowance(address,address)': [Function] {
+      call: [Function],
+      sendTransaction: [Function],
+      estimateGas: [Function],
+      request: [Function]
+    },
+    'transfer(address,uint256)': [Function] {
+      call: [Function],
+      sendTransaction: [Function],
+      estimateGas: [Function],
+      request: [Function]
+    },
+    'approve(address,uint256)': [Function] {
+      call: [Function],
+      sendTransaction: [Function],
+      estimateGas: [Function],
+      request: [Function]
+    },
+    'transferFrom(address,address,uint256)': [Function] {
+      call: [Function],
+      sendTransaction: [Function],
+      estimateGas: [Function],
+      request: [Function]
+    }
+  },
+  abi: [
+    {
+      constant: true,
+      inputs: [],
+      name: 'name',
+      outputs: [Array],
+      payable: false,
+      stateMutability: 'view',
+      type: 'function',
+      signature: '0x06fdde03'
+    },
+    {
+      constant: true,
+      inputs: [],
+      name: 'totalSupply',
+      outputs: [Array],
+      payable: false,
+      stateMutability: 'view',
+      type: 'function',
+      signature: '0x18160ddd'
+    },
+    {
+      constant: true,
+      inputs: [],
+      name: 'standard',
+      outputs: [Array],
+      payable: false,
+      stateMutability: 'view',
+      type: 'function',
+      signature: '0x5a3b7e42'
+    },
+    {
+      constant: true,
+      inputs: [Array],
+      name: 'balanceOf',
+      outputs: [Array],
+      payable: false,
+      stateMutability: 'view',
+      type: 'function',
+      signature: '0x70a08231'
+    },
+    {
+      constant: true,
+      inputs: [],
+      name: 'symbol',
+      outputs: [Array],
+      payable: false,
+      stateMutability: 'view',
+      type: 'function',
+      signature: '0x95d89b41'
+    },
+    {
+      constant: true,
+      inputs: [Array],
+      name: 'allowance',
+      outputs: [Array],
+      payable: false,
+      stateMutability: 'view',
+      type: 'function',
+      signature: '0xdd62ed3e'
+    },
+    {
+      inputs: [Array],
+      payable: false,
+      stateMutability: 'nonpayable',
+      type: 'constructor',
+      constant: undefined
+    },
+    {
+      anonymous: false,
+      inputs: [Array],
+      name: 'Transfer',
+      type: 'event',
+      constant: undefined,
+      payable: undefined,
+      signature: '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef'
+    },
+    {
+      anonymous: false,
+      inputs: [Array],
+      name: 'Approval',
+      type: 'event',
+      constant: undefined,
+      payable: undefined,
+      signature: '0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925'
+    },
+    {
+      constant: false,
+      inputs: [Array],
+      name: 'transfer',
+      outputs: [Array],
+      payable: false,
+      stateMutability: 'nonpayable',
+      type: 'function',
+      signature: '0xa9059cbb'
+    },
+    {
+      constant: false,
+      inputs: [Array],
+      name: 'approve',
+      outputs: [Array],
+      payable: false,
+      stateMutability: 'nonpayable',
+      type: 'function',
+      signature: '0x095ea7b3'
+    },
+    {
+      constant: false,
+      inputs: [Array],
+      name: 'transferFrom',
+      outputs: [Array],
+      payable: false,
+      stateMutability: 'nonpayable',
+      type: 'function',
+      signature: '0x23b872dd'
+    }
+  ],
+  address: '0x4BE2355A821325B20302a5Ae5F0F6eC5e985cFFA',
+  transactionHash: undefined,
+  contract: Contract {
+    currentProvider: [Getter/Setter],
+    _requestManager: RequestManager {
+      provider: [HttpProvider],
+      providers: [Object],
+      subscriptions: {}
+    },
+    givenProvider: null,
+    providers: {
+      WebsocketProvider: [Function: WebsocketProvider],
+      HttpProvider: [Function: HttpProvider],
+      IpcProvider: [Function: IpcProvider]
+    },
+    _provider: HttpProvider {
+      host: 'http://127.0.0.1:7545',
+      httpAgent: [Agent],
+      timeout: 0,
+      headers: undefined,
+      connected: true,
+      send: [Function],
+      _alreadyWrapped: true
+    },
+    setProvider: [Function],
+    BatchRequest: [Function: bound Batch],
+    extend: [Function: ex] {
+      formatters: [Object],
+      utils: [Object],
+      Method: [Function: Method]
+    },
+    clearSubscriptions: [Function],
+    options: { address: [Getter/Setter], jsonInterface: [Getter/Setter] },
+    defaultAccount: [Getter/Setter],
+    defaultBlock: [Getter/Setter],
+    methods: {
+      name: [Function: bound _createTxObject],
+      '0x06fdde03': [Function: bound _createTxObject],
+      'name()': [Function: bound _createTxObject],
+      totalSupply: [Function: bound _createTxObject],
+      '0x18160ddd': [Function: bound _createTxObject],
+      'totalSupply()': [Function: bound _createTxObject],
+      standard: [Function: bound _createTxObject],
+      '0x5a3b7e42': [Function: bound _createTxObject],
+      'standard()': [Function: bound _createTxObject],
+      balanceOf: [Function: bound _createTxObject],
+      '0x70a08231': [Function: bound _createTxObject],
+      'balanceOf(address)': [Function: bound _createTxObject],
+      symbol: [Function: bound _createTxObject],
+      '0x95d89b41': [Function: bound _createTxObject],
+      'symbol()': [Function: bound _createTxObject],
+      allowance: [Function: bound _createTxObject],
+      '0xdd62ed3e': [Function: bound _createTxObject],
+      'allowance(address,address)': [Function: bound _createTxObject],
+      transfer: [Function: bound _createTxObject],
+      '0xa9059cbb': [Function: bound _createTxObject],
+      'transfer(address,uint256)': [Function: bound _createTxObject],
+      approve: [Function: bound _createTxObject],
+      '0x095ea7b3': [Function: bound _createTxObject],
+      'approve(address,uint256)': [Function: bound _createTxObject],
+      transferFrom: [Function: bound _createTxObject],
+      '0x23b872dd': [Function: bound _createTxObject],
+      'transferFrom(address,address,uint256)': [Function: bound _createTxObject]
+    },
+    events: {
+      Transfer: [Function: bound ],
+      '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef': [Function: bound ],
+      'Transfer(address,address,uint256)': [Function: bound ],
+      Approval: [Function: bound ],
+      '0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925': [Function: bound ],
+      'Approval(address,address,uint256)': [Function: bound ],
+      allEvents: [Function: bound ]
+    },
+    _address: '0x4BE2355A821325B20302a5Ae5F0F6eC5e985cFFA',
+    _jsonInterface: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ]
+  },
+  name: [Function] {
+    call: [Function],
+    sendTransaction: [Function],
+    estimateGas: [Function],
+    request: [Function]
+  },
+  totalSupply: [Function] {
+    call: [Function],
+    sendTransaction: [Function],
+    estimateGas: [Function],
+    request: [Function]
+  },
+  standard: [Function] {
+    call: [Function],
+    sendTransaction: [Function],
+    estimateGas: [Function],
+    request: [Function]
+  },
+  balanceOf: [Function] {
+    call: [Function],
+    sendTransaction: [Function],
+    estimateGas: [Function],
+    request: [Function]
+  },
+  symbol: [Function] {
+    call: [Function],
+    sendTransaction: [Function],
+    estimateGas: [Function],
+    request: [Function]
+  },
+  allowance: [Function] {
+    call: [Function],
+    sendTransaction: [Function],
+    estimateGas: [Function],
+    request: [Function]
+  },
+  Transfer: [Function],
+  Approval: [Function],
+  transfer: [Function] {
+    call: [Function],
+    sendTransaction: [Function],
+    estimateGas: [Function],
+    request: [Function]
+  },
+  approve: [Function] {
+    call: [Function],
+    sendTransaction: [Function],
+    estimateGas: [Function],
+    request: [Function]
+  },
+  transferFrom: [Function] {
+    call: [Function],
+    sendTransaction: [Function],
+    estimateGas: [Function],
+    request: [Function]
+  },
+  sendTransaction: [Function],
+  send: [Function],
+  allEvents: [Function],
+  getPastEvents: [Function]
+}
+truffle(development)> tokenInstance.name()
+'Zenex Token'
+truffle(development)> web3.eth.getAccounts().then((a) => { accounts =a; })
+undefined
+truffle(development)> accounts
+[
+  '0x3A975D5dE10fcaeAaE55497f370BfbCA8F8fdF98',
+  '0x0Bb2A41B77376aE2bc180cD6E07Bc39Bc3C856d6',
+  '0x96C8C010d08ACe1e076DB4D218fA7C092Ac20c31',
+  '0xF87C97DfdC3eA02A39327960166f37499085f995',
+  '0xB6e18d2Faae9617FD6985575F42B77A01e1C2846',
+  '0xF6e7eC17fA557C8B8e94cAAFB189725165846032',
+  '0x7a6bFD5f3cb680c9d2a0490e84aBa26fC28746Af',
+  '0x4BA4f774fb9BA563C0f9A9BcFbE9471ff7b0797C',
+  '0x0fc9c8efAba290a055DD7fCb98aB865C5addadc3',
+  '0x59068080e3f6E5CaF43A7EE4931EFdAdbeeC681f'
+]
+truffle(development)> admin = accounts[0]
+'0x3A975D5dE10fcaeAaE55497f370BfbCA8F8fdF98'
+truffle(development)> admin
+'0x3A975D5dE10fcaeAaE55497f370BfbCA8F8fdF98'
+truffle(development)> tokenInstance.balanceOf(admin)
+BN {
+  negative: 0,
+  words: [ 1000000, <1 empty item> ],
+  length: 1,
+  red: null
+}
+truffle(development)> tokenInstance.balanceOf(admin).then((b) => { balance = b; })
+undefined
+truffle(development)> balance.toNumber()
+1000000
+truffle(development)> 
+
+truffle(development)> tokenInstance.allowance(accounts[0], accounts[1])
+BN {
+  negative: 0,
+  words: [ 100, <1 empty item> ],
+  length: 1,
+  red: null
+}
+truffle(development)> fromAccount  = accounts[2]
+Thrown:
+TypeError: Cannot read property 'match' of undefined
+    at ReadStream.onData (readline.js:1145:36)
+    at emitKeys.next (<anonymous>)
+    at emitKeys (internal/readline.js:424:14)
+    at ReadStream.EventEmitter.emit (domain.js:471:20)
+    at ReadStream.emit (events.js:200:13)
+    at ReadStream.onkeypress (readline.js:189:10)
+    at REPLServer.self._ttyWrite (repl.js:777:7)
+    at REPLServer.Interface._ttyWrite (readline.js:1011:14)
+    at REPLServer.Interface._line (readline.js:691:8)
+    at REPLServer.Interface._onLine (readline.js:314:10)
+    at REPLServer.EventEmitter.emit (domain.js:471:20)
+    at REPLServer.emit (events.js:200:13)
+    at REPLServer.onLine (repl.js:700:10)
+    at REPLServer.runBound [as eval] (domain.js:428:12)
+    at bound (domain.js:415:14)
+    at ReplManager.interpret (/usr/local/lib/node_modules/truffle/build/webpack:/packages/truffle-core/lib/repl.js:118:1)
+    at Console.interpret (/usr/local/lib/node_modules/truffle/build/webpack:/packages/truffle-core/lib/console.js:153:1)
+    at Command.getCommand (/usr/local/lib/node_modules/truffle/build/webpack:/packages/truffle-core/lib/command.js:21:1)
+    at Object.Yargs.self.parse (/usr/local/lib/node_modules/truffle/build/webpack:/packages/truffle-core/~/yargs/yargs.js:532:1)
+    at Object.Yargs.self._parseArgs (/usr/local/lib/node_modules/truffle/build/webpack:/packages/truffle-core/~/yargs/yargs.js:938:1)
+    at Function.Parser.detailed (/usr/local/lib/node_modules/truffle/build/webpack:/packages/truffle-core/~/yargs-parser/index.js:761:1)
+    at parse (/usr/local/lib/node_modules/truffle/build/webpack:/packages/truffle-core/~/yargs-parser/index.js:125:1)
+truffle(development)> fromAccount  = accounts[2]
+Thrown:
+TypeError: Cannot read property 'match' of undefined
+    at ReadStream.onData (readline.js:1145:36)
+    at emitKeys.next (<anonymous>)
+    at emitKeys (internal/readline.js:424:14)
+    at ReadStream.EventEmitter.emit (domain.js:471:20)
+    at ReadStream.emit (events.js:200:13)
+    at ReadStream.onkeypress (readline.js:189:10)
+    at REPLServer.self._ttyWrite (repl.js:777:7)
+    at REPLServer.Interface._ttyWrite (readline.js:1011:14)
+    at REPLServer.Interface._line (readline.js:691:8)
+    at REPLServer.Interface._onLine (readline.js:314:10)
+    at REPLServer.EventEmitter.emit (domain.js:471:20)
+    at REPLServer.emit (events.js:200:13)
+    at REPLServer.onLine (repl.js:700:10)
+    at REPLServer.runBound [as eval] (domain.js:428:12)
+    at bound (domain.js:415:14)
+    at ReplManager.interpret (/usr/local/lib/node_modules/truffle/build/webpack:/packages/truffle-core/lib/repl.js:118:1)
+    at Console.interpret (/usr/local/lib/node_modules/truffle/build/webpack:/packages/truffle-core/lib/console.js:153:1)
+    at Command.getCommand (/usr/local/lib/node_modules/truffle/build/webpack:/packages/truffle-core/lib/command.js:21:1)
+    at Object.Yargs.self.parse (/usr/local/lib/node_modules/truffle/build/webpack:/packages/truffle-core/~/yargs/yargs.js:532:1)
+    at Object.Yargs.self._parseArgs (/usr/local/lib/node_modules/truffle/build/webpack:/packages/truffle-core/~/yargs/yargs.js:938:1)
+    at Function.Parser.detailed (/usr/local/lib/node_modules/truffle/build/webpack:/packages/truffle-core/~/yargs-parser/index.js:761:1)
+    at parse (/usr/local/lib/node_modules/truffle/build/webpack:/packages/truffle-core/~/yargs-parser/index.js:125:1)
+truffle(development)> accounts
+[
+  '0x3A975D5dE10fcaeAaE55497f370BfbCA8F8fdF98',
+  '0x0Bb2A41B77376aE2bc180cD6E07Bc39Bc3C856d6',
+  '0x96C8C010d08ACe1e076DB4D218fA7C092Ac20c31',
+  '0xF87C97DfdC3eA02A39327960166f37499085f995',
+  '0xB6e18d2Faae9617FD6985575F42B77A01e1C2846',
+  '0xF6e7eC17fA557C8B8e94cAAFB189725165846032',
+  '0x7a6bFD5f3cb680c9d2a0490e84aBa26fC28746Af',
+  '0x4BA4f774fb9BA563C0f9A9BcFbE9471ff7b0797C',
+  '0x0fc9c8efAba290a055DD7fCb98aB865C5addadc3',
+  '0x59068080e3f6E5CaF43A7EE4931EFdAdbeeC681f'
+]
+truffle(development)> accounts[2]
+'0x96C8C010d08ACe1e076DB4D218fA7C092Ac20c31'
+truffle(development)> fromAccount = accounts[2]
+'0x96C8C010d08ACe1e076DB4D218fA7C092Ac20c31'
+truffle(development)> toAccount = accounts[3]
+'0xF87C97DfdC3eA02A39327960166f37499085f995'
+truffle(development)> spendingAccount = accounts[4]
+'0xB6e18d2Faae9617FD6985575F42B77A01e1C2846'
+truffle(development)> tokenInstance.transfer(fromAccount, 100, {from: accounts[0]})
+{
+  tx: '0xfb4c8ea790743afc5d00b13d868b903b142311c72589022102b512b959e437f0',
+  receipt: {
+    transactionHash: '0xfb4c8ea790743afc5d00b13d868b903b142311c72589022102b512b959e437f0',
+    transactionIndex: 0,
+    blockHash: '0x2d3511186c730870cf74ecbfd2833884e9a9d4efd01cfaa48ec2e14bc1206f91',
+    blockNumber: 418,
+    from: '0x3a975d5de10fcaeaae55497f370bfbca8f8fdf98',
+    to: '0x4be2355a821325b20302a5ae5f0f6ec5e985cffa',
+    gasUsed: 51073,
+    cumulativeGasUsed: 51073,
+    contractAddress: null,
+    logs: [ [Object] ],
+    status: true,
+    logsBloom: '0x00000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000008000000000000000000000100000000000000080000000000008000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000040010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010002000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000200000000',
+    v: '0x1b',
+    r: '0xd70fb11e8195a3ddf5ff33fce4982fa1ffecf0471f2158a86dd1712487d6f783',
+    s: '0x5691da3b7d4fe92e0815b49c261677cc8b9d3f73d3860e7aa842fa15f298117c',
+    rawLogs: [ [Object] ]
+  },
+  logs: [
+    {
+      logIndex: 0,
+      transactionIndex: 0,
+      transactionHash: '0xfb4c8ea790743afc5d00b13d868b903b142311c72589022102b512b959e437f0',
+      blockHash: '0x2d3511186c730870cf74ecbfd2833884e9a9d4efd01cfaa48ec2e14bc1206f91',
+      blockNumber: 418,
+      address: '0x4BE2355A821325B20302a5Ae5F0F6eC5e985cFFA',
+      type: 'mined',
+      id: 'log_7b2bb994',
+      event: 'Transfer',
+      args: [Result]
+    }
+  ]
+}
+truffle(development)> tokenInstance.balanceOf(fromAccount)
+BN {
+  negative: 0,
+  words: [ 100, <1 empty item> ],
+  length: 1,
+  red: null
+}
+truffle(development)> tokenInstance.approve(spendingAccount, 10, {from: fromAccount})
+{
+  tx: '0x13beaf0755aeb274036182c4b62c93d66e2c1cce1e0101ef93a35cc90339e00c',
+  receipt: {
+    transactionHash: '0x13beaf0755aeb274036182c4b62c93d66e2c1cce1e0101ef93a35cc90339e00c',
+    transactionIndex: 0,
+    blockHash: '0x25e236060dc442d46909926f11af1895d6dba0a6ded837fd1156e8c15a2062f2',
+    blockNumber: 419,
+    from: '0x96c8c010d08ace1e076db4d218fa7c092ac20c31',
+    to: '0x4be2355a821325b20302a5ae5f0f6ec5e985cffa',
+    gasUsed: 45263,
+    cumulativeGasUsed: 45263,
+    contractAddress: null,
+    logs: [ [Object] ],
+    status: true,
+    logsBloom: '0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008000000000000000000000200000000000000080000040000000000000000002000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000040010000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000040000000010000000000000000000000000000000000000000000000000000200000000',
+    v: '0x1c',
+    r: '0x2db5133c39685ec5f2165664dc79d45dc631faa8a475aefac05c12b501935967',
+    s: '0x415b09676f864df885846341267a3cac33f8d542a7974a92e0694998d15d98e4',
+    rawLogs: [ [Object] ]
+  },
+  logs: [
+    {
+      logIndex: 0,
+      transactionIndex: 0,
+      transactionHash: '0x13beaf0755aeb274036182c4b62c93d66e2c1cce1e0101ef93a35cc90339e00c',
+      blockHash: '0x25e236060dc442d46909926f11af1895d6dba0a6ded837fd1156e8c15a2062f2',
+      blockNumber: 419,
+      address: '0x4BE2355A821325B20302a5Ae5F0F6eC5e985cFFA',
+      type: 'mined',
+      id: 'log_eb547cda',
+      event: 'Approval',
+      args: [Result]
+    }
+  ]
+}
+truffle(development)> tokenInstance.transfer(fromAccount, toAccount, 10, {from: spendingAccount})
+Thrown:
+Error: Invalid number of parameters for "transfer". Got 4 expected 2!
+    at Object._createTxObject (/usr/local/lib/node_modules/truffle/build/webpack:/~/web3-eth-contract/src/index.js:699:1)
+    at Object.InvalidNumberOfParams (/usr/local/lib/node_modules/truffle/build/webpack:/~/web3-eth-contract/~/web3-core-helpers/src/errors.js:32:1)
+truffle(development)> tokenInstance.transferFrom(fromAccount, toAccount, 10, {from: spendingAccount})
+{
+  tx: '0x754ec1ecc70f80f6c70d5afa6083a81de9e48ca57ae634b92f79b8b34019e00d',
+  receipt: {
+    transactionHash: '0x754ec1ecc70f80f6c70d5afa6083a81de9e48ca57ae634b92f79b8b34019e00d',
+    transactionIndex: 0,
+    blockHash: '0xa4d855f55ecb10fcc500f739f41c4173589f59b22e30ea41b08880f4922d3907',
+    blockNumber: 420,
+    from: '0xb6e18d2faae9617fd6985575f42b77a01e1c2846',
+    to: '0x4be2355a821325b20302a5ae5f0f6ec5e985cffa',
+    gasUsed: 43337,
+    cumulativeGasUsed: 43337,
+    contractAddress: null,
+    logs: [ [Object] ],
+    status: true,
+    logsBloom: '0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000080000000000008000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000040010000000000000000000000002000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000080000040000100000000000000000000000000000000000000000000000000000000200000000',
+    v: '0x1b',
+    r: '0xd4b1aed3e24365fa083a63baf35961c1381cc4ad0df76563d61c77d493a707fe',
+    s: '0x7dfef4adc69d83a298f9a2863abca5886a6bc2eaee160ae1033d78bb3ce464b0',
+    rawLogs: [ [Object] ]
+  },
+  logs: [
+    {
+      logIndex: 0,
+      transactionIndex: 0,
+      transactionHash: '0x754ec1ecc70f80f6c70d5afa6083a81de9e48ca57ae634b92f79b8b34019e00d',
+      blockHash: '0xa4d855f55ecb10fcc500f739f41c4173589f59b22e30ea41b08880f4922d3907',
+      blockNumber: 420,
+      address: '0x4BE2355A821325B20302a5Ae5F0F6eC5e985cFFA',
+      type: 'mined',
+      id: 'log_b4e0766f',
+      event: 'Transfer',
+      args: [Result]
+    }
+  ]
+}
+truffle(development)> tokenInstance.balanceOf(fromAccount)
+BN { negative: 0, words: [ 90, <1 empty item> ], length: 1, red: null }
+truffle(development)> tokenInstance.balanceOf(toAccount)
+BN { negative: 0, words: [ 10, <1 empty item> ], length: 1, red: null }
+truffle(development)> tokenInstance.allowance(toAccount)
+Thrown:
+Error: Invalid number of parameters for "allowance". Got 1 expected 2!
+    at Object._createTxObject (/usr/local/lib/node_modules/truffle/build/webpack:/~/web3-eth-contract/src/index.js:699:1)
+    at Object.InvalidNumberOfParams (/usr/local/lib/node_modules/truffle/build/webpack:/~/web3-eth-contract/~/web3-core-helpers/src/errors.js:32:1)
+truffle(development)> tokenInstance.balanceOf(fromAccount)
+BN { negative: 0, words: [ 90, <1 empty item> ], length: 1, red: null }
+truffle(development)> tokenInstance.balanceOf(spendingAccount)
+BN { negative: 0, words: [ 0, <1 empty item> ], length: 1, red: null }
+truffle(development)> 
